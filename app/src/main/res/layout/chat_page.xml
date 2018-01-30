@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7">
+
+
+    <RelativeLayout
+        android:id="@+id/chatPage_headerBar_container_header"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:background="#075E55"
+        android:minHeight="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/chatPage_headerBar_back_layout"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/chatPage_headerBar_senderName_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chatPage_headerBar_senderName_status"
+            android:layout_centerVertical="true"
+
+            android:layout_toLeftOf="@+id/chatPage_header_senderImage"
+            android:layout_toRightOf="@+id/chatPage_headerBar_back_layout"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/chatPage_headerBar_senderName_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="9dp"
+            android:layout_toLeftOf="@+id/chatPage_header_senderImage"
+            android:layout_toRightOf="@+id/chatPage_headerBar_back_layout"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#C5C5C5"
+            android:textSize="19sp" />
+
+        <com.hoperrush.core.widgets.RoundedImageView
+            android:id="@+id/chatPage_header_senderImage"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/chatPage_bottom_main_layout"
+        android:layout_below="@+id/chatPage_headerBar_container_header"
+        android:background="@drawable/chat">
+
+        <ListView
+            android:id="@+id/chatPage_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:divider="#FFFFFF"
+            android:dividerHeight="0dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:scrollbars="none"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chatPage_bottom_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E8E8E8">
+
+        <RelativeLayout
+            android:id="@+id/chatPage_bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8E8E8"
+            android:visibility="visible"
+          >
+
+            <com.hoperrush.core.widgets.CustomEdittext
+                android:id="@+id/chatPage_message_editText"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/chatPage_send_imageView"
+                android:background="@xml/layout_curve_white_background"
+                android:gravity="center_vertical|left"
+                android:hint="@string/chat_page_label_message"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:minLines="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="#4e4e4e"
+                android:textColorHint="#979797"
+                android:textSize="13sp"
+              />
+
+            <ImageView
+                android:id="@+id/chatPage_send_imageView"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/send_icon_dim" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/chatPage_noChat_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#FFFFFF"
+            android:visibility="gone">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:text="@string/chat_page_label_message_cannot_send"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#ffffff">
+
+    <com.widget.CustomTextView
+        android:id="@+id/country_code_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/select_country_label"
+        android:textColor="#4e4e4e"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/country_code_picker_search"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#4e4e4e"
+        android:textSize="14sp"
+        android:imeOptions="actionDone"
+        android:inputType="textImeMultiLine"
+        android:layout_below="@+id/country_code_title"
+        android:background="@drawable/edittext_fouced_grey"
+        android:drawableLeft="@drawable/search_icon"
+        android:hint="@string/search"/>
+
+    <ListView
+        android:id="@+id/country_code_picker_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/country_code_picker_search"
+        android:background="#ffffff"
+        android:divider="#E7E7E7"
+        android:scrollbars="none"
+        android:dividerHeight="1px">
+    </ListView>
+
+</RelativeLayout>

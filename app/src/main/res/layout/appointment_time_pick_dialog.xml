@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@xml/dialog_curve_background">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/appointment_time_pick_title_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/appointment_label_dialog_select_time"
+            android:textColor="@color/app_color"
+            android:textSize="17sp"/>
+
+        <ListView
+            android:id="@+id/appointment_time_pick_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_time_pick_title_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:divider="#cdcdcd"
+            android:background="#ffffff"
+            android:dividerHeight="1px"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scrollbars="none"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

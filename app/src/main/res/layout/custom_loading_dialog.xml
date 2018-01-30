@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="51dp"
+              android:layout_margin="1dp"
+              android:background="@xml/curve_shape_background"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/custom_loading_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="30dp"
+            android:text=""
+            android:textColor="#F83C6F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif"/>
+
+        <ProgressBar
+            android:id="@+id/progress_wheel"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

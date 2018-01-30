@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2">
+
+    <include
+        android:id="@+id/plumbal_money_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/plumbal_money_headerBar_container_header"
+        android:background="#00000000"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/jobidtext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/circleshape">
+
+                <ImageView
+                    android:id="@+id/plumbal_money_logo_imageview"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/wallet1" />
+            </RelativeLayout>
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/plumbal_money_cashless_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/plumbalMoney_label_textView"
+                android:textAlignment="gravity"
+                android:textColor="#9d9d99"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/plumbal_money_balance_cardView_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plumbal_money_cashless_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                card_view:cardElevation="1dp">
+
+                <RelativeLayout
+                    android:id="@+id/plumbal_money_current_balance_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/plumbal_money_cashless_label"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff">
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/plumbal_money_your_balance_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/plumbalMoney_label_your_current_balance_textView"
+                        android:textColor="#4e4e4e"
+                        android:textSize="15sp" />
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/plumbal_money_your_balance_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/plumbal_money_right_arrow_imageview"
+                        android:text=""
+                        android:textColor="#4e4e4e"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/plumbal_money_right_arrow_imageview"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/triangular_arrow_right" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/plumbal_money_add_plumbal_money_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plumbal_money_balance_cardView_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/plumbalMoney_label_add_plumbalMoney"
+                android:textColor="#4e4e4e"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <com.hoperrush.core.widgets.CustomEdittext
+                android:id="@+id/plumbal_money_enter_amount_editText"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/plumbal_money_add_plumbal_money_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/grey_border_background"
+                android:hint="@string/plumbalMoney_label_rechargeMoney_editText"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingLeft="8dp"
+                android:textColor="#4e4e4e"
+                android:textColorHint="#9d9d99"
+                android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:id="@+id/plumbal_money_balance_option_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plumbal_money_enter_amount_editText"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/plumbal_money_minimum_amt_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/grey_border_background"
+                    android:text="$500"
+                    android:textColor="#4e4e4e"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/plumbal_money_between_amt_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/grey_border_background"
+                    android:text="$2750"
+                    android:textColor="#4e4e4e"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/plumbal_money_maximum_amt_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/grey_border_background"
+                    android:text="$5000"
+                    android:textColor="#4e4e4e"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/plumbal_money_add_money_button"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/plumbal_money_balance_option_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/appmain_color"
+                android:text="@string/walletMoney_label_add_psgiMoney"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/plumbal_money_add_plumbal_TXT_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="or"
+                android:visibility="gone"
+                android:textColor="#4e4e4e"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/plumbal_money_add_money_button"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/plumbal_money_add_money_button_paypal"
+                android:layout_width="120dp"
+                android:visibility="gone"
+                android:layout_height="45dp"
+                android:layout_below="@+id/plumbal_money_add_plumbal_TXT_or"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/appmain_color"
+                android:text="@string/plumbal_money_add_money_button_paypal"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/plumbal_money_add_money_buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/plumbal_money_balance_option_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/app_color_button"
+                android:text="@string/plumbalMoney_label_add_plumbalMoney"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/payments_disabled_text"
+                android:layout_below="@+id/plumbal_money_add_money_button_paypal"
+                android:layout_centerHorizontal="true"
+                android:textSize="16dp"
+                android:textColor="@color/black_color"
+                android:layout_marginTop="50dp"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hoperrush_backgroud">
+
+    <RelativeLayout
+        android:id="@+id/login_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent_color">
+
+        <RelativeLayout
+            android:id="@+id/login_header_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:src="@drawable/back_arrow" />
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/login_header_back_layout"
+            android:text="@string/login_label_login1"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/login_layout_header"
+        android:layout_centerHorizontal="true"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/login_layout_header"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/login_email_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="35dp"
+                android:hint="@string/login_label_Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:layout_below="@+id/login_facebook_button"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="#cc0000"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_hideUnderline="false"
+                app:met_iconLeft="@drawable/email_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_underlineColor="#D3D3D3" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/login_password_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/login_label_password"
+                android:inputType="text"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="#FFFFFF"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_hideUnderline="false"
+                app:met_iconLeft="@drawable/password_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_underlineColor="#D3D3D3" />
+
+
+            <Button
+                android:id="@+id/login_submit_button"
+                android:layout_width="fill_parent"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="#D5D4D2"
+                android:text="@string/login_label_login"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="OR"
+                android:layout_marginTop="20dp"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <Button
+                android:id="@+id/login_facebook_button"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/facebook_full_icon"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+                android:id="@+id/login_forgot_pwd_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/login_submit_button"
+                android:layout_marginTop="10dp"
+                android:background="#00000000">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/login_label_forgot_password"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/login_forgot_register_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/login_forgot_pwd_layout"
+                android:layout_marginTop="10dp"
+                android:background="#00000000">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_label"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

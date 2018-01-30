@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5ED">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@xml/layout_curve_white_background">
+
+
+        <com.hoperrush.core.widgets.RoundedImageView
+            android:id="@+id/providerimg"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/hoperrush_backgroud" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_prividers_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/providerimg"
+            android:layout_marginTop="10dp"
+           >
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/providername"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:text="vinuselvaraj"
+                android:textColor="@color/appmain_color"
+                android:textSize="16sp"
+                 android:singleLine="true"/>
+
+
+            <RatingBar
+                android:id="@+id/provider_rating"
+                style="@style/CustomRatingBarNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/providername"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:isIndicator="true" />
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/provider_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/provider_rating"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"
+                android:text="default company"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_avail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/provider_company_name"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:visibility="gone">
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/provider_availableTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Availablity :"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/provider_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/provider_availableTv"
+                    android:text="jbkh"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_minimumcost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_avail"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp">
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/provider_mincostTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Min Cost :"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/provider_mincost"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/provider_mincostTv"
+                    android:text="jbkh"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layout_percost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_minimumcost"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp">
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/provider_percostTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hourly Cost :"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/provider_percost"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/provider_percostTv"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="2px"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="19dp"
+            android:layout_toRightOf="@+id/layout_prividers_info"
+            android:background="#cdcdcd"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/providers_chat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/view">
+
+            <Button
+                android:id="@+id/chat_button"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_above="@+id/myJob_detail_requestSubmitted_response_button_view"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                android:background="#2fb327"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/chat"
+                android:textColor="#EEEEEE"
+                android:textSize="12sp" />
+            <!--
+                        <ImageView
+                            android:id="@+id/chat"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/chatonline"/>
+
+
+                        <com.maidac.mylibrary.widgets.CustomTextView
+                            android:id="@+id/chatonline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/chat"
+                            android:layout_centerVertical="true"
+                            android:text="Online"
+                            android:textColor="#2fb327"
+                            android:textSize="13sp" />-->
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/confirmbook_button1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/providers_chat_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/view">
+
+            <Button
+                android:id="@+id/confirmbook_button"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_above="@+id/myJob_detail_requestSubmitted_response_button_view"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                android:background="@color/appmain_color"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/confirmbook"
+                android:textColor="#EEEEEE"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="7dp"
+            android:text="12 yrs exp"
+            android:textSize="12dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/exp"
+            android:textColor="#000"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/exp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/dot"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/dotimage"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/dotimage"
+            android:layout_marginLeft="10dp"
+            android:text="20 reviews"
+            android:textSize="12dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/reviews"
+            android:textColor="#000"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/reviews"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/dot"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/dotimage1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/dotimage1"
+            android:layout_marginLeft="4dp"
+            android:text="~ 12.6 km"
+            android:textSize="12dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/radius"
+            android:textColor="#000"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/radius"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginBottom="2dp"
+            android:id="@+id/dotimage2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/dotimage2"
+            android:layout_marginLeft="3dp"
+
+            android:textSize="12dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/hcost"
+            android:textColor="#9b9b9b"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

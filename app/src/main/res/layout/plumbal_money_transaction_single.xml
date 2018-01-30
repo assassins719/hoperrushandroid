@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/cabily_money_transaction_single_type_layout"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/cabily_money_transaction_single_type_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/cabily_money_transaction_single_type_imageview"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/cabily_money_transaction_single_type_textview"
+                android:layout_marginLeft="4dp"/>
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/cabily_money_transaction_single_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/cabily_money_transaction_single_type_layout"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="15sp"/>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/cabily_money_transaction_single_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cabily_money_transaction_single_price"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/cabily_money_transaction_single_type_layout"
+            android:text=""
+            android:textColor="#4e4e4e"
+            android:textSize="14sp"/>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/cabily_money_transaction_single_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cabily_money_transaction_single_description"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/cabily_money_transaction_single_balance_price"
+            android:layout_toRightOf="@+id/cabily_money_transaction_single_type_layout"
+            android:text=""
+            android:textColor="#4e4e4e"
+            android:textSize="14sp"/>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/cabily_money_transaction_single_balance_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/cabily_money_transaction_single_date"
+            android:layout_marginRight="5dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="15sp"/>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:layout_alignStart="@+id/cabily_money_transaction_single_date"
+            android:layout_below="@+id/cabily_money_transaction_single_balance_price"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

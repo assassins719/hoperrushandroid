@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="#EEEEEE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE">
+
+        <include
+            android:id="@+id/homepage_headerBar_container_header"
+            layout="@layout/toolbar_layout_without_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/book_my_ride_content_map_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/homepage_headerBar_container_header"
+            android:background="#ffffff"
+            android:visibility="visible">
+
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:visibility="gone">
+
+       <net.bohush.geometricprogressview.GeometricProgressView
+           android:id="@+id/progressView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:gp_type="triangle"
+           app:gp_number_of_angles="7"
+           app:gp_color="@android:color/black"
+           app:gp_duration="800"
+           app:gp_figure_padding="3dp"
+           android:layout_centerHorizontal="true"/>
+   </RelativeLayout>
+
+            <fragment
+                android:id="@+id/book_my_ride_mapview"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false" />
+            <ImageButton
+                android:id="@+id/traffic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/book_cardview_current_location_layout"
+                android:layout_alignParentRight="true"
+                android:paddingTop="5dp"
+                android:background="@drawable/traffic_off"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_above="@+id/book_my_ride_center_marker_RelativeLayout"
+                android:layout_centerHorizontal="true"
+                android:background="#000"
+                android:id="@+id/available_service"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service not available"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:textColor="#FFF"
+                    android:id="@+id/selected_text"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/loding_layout"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/curve_background_black"
+                android:visibility="gone">
+
+                <com.hoperrush.mylibrary.ProgressWheel
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:matProg_barWidth="3dp"
+                    wheel:matProg_barColor="#00BFFF"
+                    wheel:matProg_fillRadius="true"
+                    wheel:matProg_progressIndeterminate="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/book_my_ride_center_marker_RelativeLayout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/book_my_ride_center_view1"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/book_my_ride_center_marker"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/map_pin"
+                    android:visibility="visible" />
+                <ProgressBar
+                    android:id="@+id/book_my_ride_progress_wheel"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/book_my_ride_center_marker"
+                    android:clickable="false"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@xml/circle_progress_animation"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/book_my_ride_center_view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_centerInParent="true"
+                android:background="#ffffff"
+                android:visibility="invisible" />
+
+
+            <RelativeLayout
+                android:id="@+id/book_my_ride_loading_layout"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/curve_background_black"
+                android:visibility="gone">
+
+                <com.hoperrush.mylibrary.ProgressWheel
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:matProg_barWidth="3dp"
+                    wheel:matProg_barColor="#FCC900"
+                    wheel:matProg_fillRadius="true"
+                    wheel:matProg_progressIndeterminate="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/pickupdroplayout"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chatprofileview">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="17dp"
+                    android:id="@+id/search_image"
+                    android:layout_marginLeft="10dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/search_icon"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentTop="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Job Location"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/appmain_color"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/search_image"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/map_layout_address_text"
+                    >
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_address"
+                        android:textColor="#9b9b99"
+                        android:textSize="15sp"
+                        android:id="@+id/map_address_text"
+                        android:singleLine="true"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/favourite_layout">
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:background="#9b9b99"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/fav_view"
+                        android:layout_alignParentLeft="true"
+                        android:visibility="gone">
+
+                    </View>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/heart_icon"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/book_cardview_current_location_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pickupdroplayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                card_view:cardBackgroundColor="#ffffff"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/book_current_location_imageview"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/current_location_icon" />
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/book_my_ride_ridenow_option_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:visibility="visible"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/book_my_ride_loading_layout">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:background="#DCDCDC"
+                android:id="@+id/main_category_layout">
+
+                <com.hoperrush.utils.HorizontalListView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="#DCDCDC"
+                    android:id="@+id/horizontal_listview">
+
+
+                </com.hoperrush.utils.HorizontalListView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/horizontal_listview"
+                    android:background="#DCDCDC"
+                    android:id="@+id/booking_layout"
+                    android:visibility="gone">
+
+                    <Button
+                        android:text="@string/book_now"
+                        android:id="@+id/book_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:padding="10dip"
+                        android:layout_weight="1"
+                        android:background="@color/appmain_color"
+                        android:textColor="#FFF"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"/>
+
+                    <Button
+                        android:text="@string/book_later"
+                        android:id="@+id/book_later"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:padding="10dip"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="#696969"
+                        android:textColor="#FFF"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/horizontal_listview"
+                    android:background="#DCDCDC"
+                    android:id="@+id/login_layout"
+                    android:visibility="gone">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/appmain_color"
+                        android:textColor="#FFF"
+                        android:text="Login"
+                        android:textStyle="bold"
+                        android:id="@+id/login_button"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_above="@+id/main_category_layout"
+                android:background="#FFF"
+                android:id="@+id/subcategory_layout"
+                android:visibility="gone"
+                android:layout_marginBottom="7dp"
+                >
+                <com.hoperrush.utils.HorizontalListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:id="@+id/horizontal_subcategory_listview">
+                </com.hoperrush.utils.HorizontalListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/appmain_color"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/subcategory_view"
+                    android:visibility="gone">
+
+                </View>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/appmain_color"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/subcategory_view1"
+                    android:visibility="gone">
+
+                </View>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

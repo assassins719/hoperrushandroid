@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hoperrush.core.parallaxscrollview.ParallaxScrollView
+        android:id="@+id/myJobs_Detail_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/myJobs_detail_bottom_status_layout"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:alpha_factor="1.9"
+        app:parallax_factor="1.9">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+            <RelativeLayout
+                android:id="@+id/myJobs_Detail_topRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000">
+
+
+                <RelativeLayout
+                    android:id="@+id/myJobs_Detail_inner_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="220dp"
+                    android:background="#00000000">
+
+                    <fragment
+                        android:id="@+id/myJobs_detail_mapView"
+                        android:name="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:clickable="false" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="#99000000">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="53dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:minHeight="?attr/actionBarSize">
+
+                            <RelativeLayout
+                                android:id="@+id/myJob_detail_headerBar_left_layout"
+                                android:layout_width="45dp"
+                                android:layout_height="fill_parent"
+                                android:background="#00000000">
+
+                                <ImageView
+                                    android:id="@+id/headerBar_imageView"
+                                    android:layout_width="23dp"
+                                    android:layout_height="23dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/back_arrow" />
+
+                            </RelativeLayout>
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/myJob_detail_headerBar_title_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/myJob_detail_headerBar_left_layout"
+                                android:text=""
+                                android:textColor="#ffffff"
+                                android:textSize="17sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:minHeight="?attr/actionBarSize">
+
+
+                            <ImageView
+                                android:id="@+id/myJob_detail_requestSubmitted_imageView"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/empty_circle_icon" />
+
+                            <View
+                                android:id="@+id/myJob_detail_requestSubmitted_view"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_toLeftOf="@+id/myJob_detail_professionalAssigned_imageView"
+                                android:layout_toRightOf="@+id/myJob_detail_requestSubmitted_imageView"
+                                android:background="#16a085" />
+
+                            <ImageView
+                                android:id="@+id/myJob_detail_professionalAssigned_imageView"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_circle_icon" />
+
+
+                            <View
+                                android:id="@+id/myJob_detail_professionalAssigned_view"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_toLeftOf="@+id/myJob_detail_serviceDelivery_imageView"
+                                android:layout_toRightOf="@+id/myJob_detail_professionalAssigned_imageView"
+                                android:background="#16a085" />
+
+
+                            <ImageView
+                                android:id="@+id/myJob_detail_serviceDelivery_imageView"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/empty_circle_icon" />
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/myJob_detail_requestSubmitted_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/myJob_detail_requestSubmitted_imageView"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:text="@string/myJobs_detail_label_requestSubmitted"
+                                android:textColor="#ffffff"
+                                android:textSize="13sp" />
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/myJob_detail_professionalAssigned_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/myJob_detail_professionalAssigned_imageView"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:text="@string/myJobs_detail_label_professionalAssigned"
+                                android:textColor="#ffffff"
+                                android:textSize="13sp" />
+
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/myJob_detail_serviceDelivery_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/myJob_detail_serviceDelivery_imageView"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:text="@string/myJobs_detail_label_serviceDelivery"
+                                android:textColor="#ffffff"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/myJob_detail_Tab_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/myJobs_Detail_inner_RelativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:background="#252525">
+
+                    <Button
+                        android:id="@+id/myJob_detail_requestSubmitted_detail_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_above="@+id/myJob_detail_requestSubmitted_detail_button_view"
+                        android:layout_toLeftOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                        android:background="#252525"
+                        android:text="@string/myJobs_detail_label_detail"
+                        android:textColor="#EEEEEE"
+                        android:textSize="14sp" />
+
+
+                    <View
+                        android:id="@+id/myJob_detail_requestSubmitted_detail_button_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toLeftOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                        android:background="#252525" />
+
+
+                    <View
+                        android:id="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/myJob_detail_requestSubmitted_response_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_above="@+id/myJob_detail_requestSubmitted_response_button_view"
+                        android:layout_toRightOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                        android:background="#252525"
+                        android:text="@string/myJobs_detail_label_response"
+                        android:textColor="#EEEEEE"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/myJob_detail_requestSubmitted_response_button_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                        android:background="#252525" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/myJobs_Detail_topRelativeLayout"
+                android:layout_centerHorizontal="true"
+                android:background="#E5E5ED">
+
+                <RelativeLayout
+                    android:id="@+id/myJob_detail_detailView_RelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone">
+
+                  <RelativeLayout
+                      android:id="@+id/myJob_detail_cancel_reason_layout"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <com.hoperrush.core.widgets.CustomTextView
+                          android:id="@+id/myJobs_detail_cancel_reason_text"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentStart="true"
+                          android:layout_alignParentTop="true"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginTop="20dp"
+                          android:text="@string/cancel_reason_text"
+                          android:textColor="#000000"
+                          android:textSize="16sp" />
+
+                      <View
+                          android:id="@+id/myJobs_detail_cancel_reason_view"
+                          android:layout_width="fill_parent"
+                          android:layout_height="1px"
+                          android:layout_below="@+id/myJobs_detail_cancel_reason_text"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginRight="10dp"
+                          android:layout_marginTop="6dp"
+                          android:background="#16a085" />
+
+                      <ImageView
+                          android:id="@+id/myJob_detail_cancel_reason_dot_imageView"
+                          android:layout_width="10dp"
+                          android:layout_height="10dp"
+                          android:layout_alignParentLeft="true"
+                          android:layout_below="@+id/myJobs_detail_cancel_reason_view"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginTop="10dp"
+                          android:src="@drawable/dot_icon" />
+
+                      <com.hoperrush.core.widgets.CustomTextView
+                          android:id="@+id/myJobs_detail_cancel_reason_textView"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/myJobs_detail_cancel_reason_view"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="4dp"
+                          android:layout_toRightOf="@+id/myJob_detail_cancel_reason_dot_imageView"
+                          android:text="Low Price"
+                          android:textColor="#7c7979"
+                          android:textSize="16sp" />
+
+                  </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/myJob_detail_detailView_date_time_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/myJob_detail_cancel_reason_layout">
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJobs_detail_date_and_time_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="13dp"
+                            android:text="@string/myJobs_detail_label_date_time"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/myJobs_detail_date_and_time_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/myJobs_detail_date_and_time_label"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="6dp"
+                            android:background="#16a085" />
+
+                        <ImageView
+                            android:id="@+id/myJob_detail_date_and_time_dot_imageView"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/myJobs_detail_date_and_time_view"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/dot_icon" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJobs_detail_date_and_time_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myJobs_detail_date_and_time_view"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@+id/myJob_detail_date_and_time_dot_imageView"
+                            android:text="Jan 20,2015"
+                            android:textColor="#7c7979"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/myJob_detail_detailView_location_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myJob_detail_detailView_date_time_RelativeLayout"
+                        android:layout_centerHorizontal="true">
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJobs_detail_location_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="7dp"
+                            android:text="@string/myJobs_detail_label_location"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/myJobs_detail_location_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/myJobs_detail_location_label"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="6dp"
+                            android:background="#16a085" />
+
+                        <ImageView
+                            android:id="@+id/myJob_detail_location_dot_imageView"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/myJobs_detail_location_view"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/dot_icon" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJobs_detail_location_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myJobs_detail_location_view"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@+id/myJob_detail_location_dot_imageView"
+                            android:text="Jan 20,2015"
+                            android:textColor="#7c7979"
+                            android:textSize="16sp" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/myJobs_detail_location_textView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/myJob_detail_detailView_status_ListView_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myJob_detail_detailView_location_RelativeLayout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp">
+
+                        <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                            android:id="@+id/myJobs_detail_status_listView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E5E5ED"
+                            android:padding="0dp" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/myJobs_detail_status_listView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/myJob_detail_responseView_RelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="#00000000"
+                    android:visibility="gone">
+
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/myJob_detail_responseView_noProvider_available_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/myJobs_detail_label_no_provider_assigned"
+                        android:textColor="#4e4e4e"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/myJob_detail_responseView_provide_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@xml/layout_curve_white_background"
+                        android:visibility="gone">
+
+                        <RatingBar
+                            android:id="@+id/myJob_detail_responseView_ratingBar"
+                            style="@style/CustomRatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="13dp"
+                            android:isIndicator="true"
+                            android:numStars="5" />
+
+                        <com.hoperrush.core.widgets.RoundedImageView
+                            android:id="@+id/myJob_detail_responseView_profile_imageView"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/myJob_detail_responseView_ratingBar"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="0dp"
+                            android:src="@drawable/hoperrush_backgroud" />
+
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJob_detail_responseView_profileName_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myJob_detail_responseView_ratingBar"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/myJob_detail_responseView_profile_imageView"
+                            android:text=""
+                            android:textColor="#1C1C1C"
+                            android:textSize="17sp" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJob_detail_responseView_profileEmail_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myJob_detail_responseView_profileName_textView"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@+id/myJob_detail_responseView_profile_imageView"
+                            android:text=""
+                            android:textColor="#4e4e4e"
+                            android:textSize="15sp" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJob_detail_responseView_bio_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myJob_detail_responseView_profileEmail_textView"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/myJob_detail_responseView_profile_imageView"
+                            android:text="@string/myJobs_detail_label_bio"
+                            android:textColor="#878787"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJob_detail_responseView_bio_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myJob_detail_responseView_profileEmail_textView"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toRightOf="@+id/myJob_detail_responseView_bio_label"
+                            android:text=""
+                            android:textColor="#4D4D4D"
+                            android:textSize="14sp" />
+
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/myJob_detail_responseView_dummy_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/myJob_detail_responseView_bio_textView"
+                            android:layout_marginTop="17dp"
+                            android:layout_toRightOf="@+id/myJob_detail_responseView_bio_label"
+                            android:visibility="invisible" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/myJob_detail_responseView_option_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/myJob_detail_responseView_dummy_textView"
+                            android:layout_centerHorizontal="true"
+                            android:background="#00000000">
+
+                            <View
+                                android:id="@+id/myJob_detail_responseView_view1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:layout_alignParentTop="true"
+                                android:background="#E5E5ED" />
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_below="@+id/myJob_detail_responseView_view1"
+                                android:layout_centerHorizontal="true"
+                                android:background="#00000000">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="#00000000"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/myJob_detail_responseView_chat_layout"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1"
+                                        android:background="#00000000"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="18dp"
+                                            android:layout_height="18dp"
+                                            android:src="@drawable/chat_icon" />
+
+                                        <com.hoperrush.core.widgets.CustomTextView
+                                            android:id="@+id/chat_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:text="@string/myJobs_detail_label_chat"
+                                            android:textColor="#1C1C1C"
+                                            android:textSize="13sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/myJob_detail_responseView_viewProfile_layout"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1"
+                                        android:background="#00000000"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <View
+                                            android:layout_width="1dp"
+                                            android:layout_height="fill_parent"
+                                            android:layout_gravity="left|center_vertical"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:background="#E5E5ED" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="#00000000"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <com.hoperrush.core.widgets.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:text="@string/myJobs_detail_label_viewProfile"
+                                                android:textColor="#1C1C1C"
+                                                android:textSize="13sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.hoperrush.core.parallaxscrollview.ParallaxScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/myJobs_detail_bottom_status_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E5E5ED">
+
+        <com.hoperrush.core.widgets.CustomTextView
+
+            android:id="@+id/myJobs_detail_bottom_job_status_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="#FFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/payment"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="6dp"
+            android:text="Make Payment"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/view1"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1px"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/add_address_country_code_editText"
+            android:background="#9b9b9b"
+            android:visibility="gone" />
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/faresummayid"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/myJobs_detail_bottom_job_status_arrow_icon"
+            android:text="View Summary"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/view1"/>
+
+        <ImageView
+            android:id="@+id/myJobs_detail_bottom_job_status_arrow_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/circle_right_arrow1"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/tracklayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_color"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/myjob_ongoing_main_startjob_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/job_detail_btn1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#cc0000"
+                android:text="Cancel Visit"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/trackpage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#6c3a02"
+                android:text="Track Visit"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

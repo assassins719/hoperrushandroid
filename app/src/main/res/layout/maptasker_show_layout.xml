@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:id="@+id/appointment_page_cardView_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#f7fbfc"
+       android:layout_centerInParent="true" >
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="270dp"
+            android:id="@+id/relative"
+            android:background="#FFF">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="70dp"
+                android:background="@color/appmain_color"> </RelativeLayout>
+            <com.hoperrush.core.widgets.CircularImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                 android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/avatar"
+               android:layout_centerHorizontal="true"
+                android:id="@+id/user_image"
+                android:elevation="3dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_image"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="#FFF"
+                android:text="Prabu"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/user_name"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ratingstar"
+                android:layout_below="@+id/user_name"
+                android:layout_marginTop="6dp"
+                android:id="@+id/ratingimage"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ratingimage"
+                android:layout_above="@+id/username"
+                android:layout_marginTop="9dp"
+                android:text="5.0"
+                android:textSize="12sp"
+                android:id="@+id/rating"
+                android:textColor="#FFF"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/user_name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#FFF"
+                android:text="Mini_Cost :"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/mini_cost"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mini_cost"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#FFF"
+                android:text="Hour_Cost :"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/hour_cost"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@+id/hour_cost"
+                android:background="#FFF"
+                android:layout_marginTop="10dp"
+                android:id="@+id/view1"
+                ></View>
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view1"
+                android:background="#FFF"
+                android:id="@+id/view2"
+                android:layout_marginLeft="90dp"
+                ></View>
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view1"
+                android:background="#FFF"
+                android:id="@+id/view3"
+                android:layout_marginRight="90dp"
+                android:layout_alignParentRight="true"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:text="CHAT"
+                android:layout_marginTop="10dp"
+                android:id="@+id/chat"
+                android:paddingBottom="3dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:text="BOOK"
+                android:layout_marginTop="10dp"
+                android:id="@+id/book"
+                android:paddingBottom="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:text="DETAILS"
+                android:layout_marginTop="10dp"
+                android:id="@+id/details"
+                android:paddingBottom="3dp"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

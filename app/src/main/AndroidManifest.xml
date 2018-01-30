@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hoperrush">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Push Notification Permission -->
+    <uses-permission android:name="com.cabily.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- Camera Permission -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- MAP Permission -->
+    <permission
+        android:name="com.hoperrush.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.casperon.plumbal.permission.MAPS_RECEIVE" />
+
+    <application
+        android:name="com.hoperrush.core.volley.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/hopericon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.hoperrush.app.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Push Notification Permission -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.hoperrush.utils.RestartService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartApps" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE" />
+            </intent-filter>
+        </receiver>
+
+        <!--<receiver-->
+            <!--android:name=".GcmBroadcastReceiver"-->
+            <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+                <!--<action android:name="com.google.android.c2dm.intent.REGISTRATION" />-->
+                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+                <!--<action android:name="android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE" />-->
+
+                <!--<category android:name="com.maidac" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!-- Firebase Notifications -->
+        <service android:name="com.hoperrush.FCM.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.hoperrush.FCM.MyFirebaseInstanceIDService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+
+        <service android:name="com.hoperrush.core.pushnotification.GCMNotificationIntentService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <service android:name="com.hoperrush.utils.AndroidServiceStartOnBoot"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!-- Identify App Killed or not Service Permission -->
+        <service
+            android:name="com.hoperrush.utils.IdentifyAppKilled"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <!-- MAP Permission -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDXVTR_V9gvWep08joXPO2RTJcDBpNsu5I" />
+
+        <activity android:name="net.hockeyapp.android.UpdateActivity" />
+        <activity
+            android:name="com.hoperrush.app.SignInAndSignUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.LogInPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.NavigationDrawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.RegisterPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.OtpPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.LocationSearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.CitySelection"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.AboutUs"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.EmergencyContact"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.InviteAndEarn"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.WalletMoney"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.GetMessageChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.PartnerProfilePage"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.MaidacMoneyWebView"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.MaidacMoneyTransaction"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.CategoriesDetailPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.AppointmentPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.AddAddressPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.AppointmentConfirmationPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.MyJobs"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ProvidersList"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.PushNotificationAlert"
+            android:screenOrientation="portrait"
+            android:theme="@style/PushNotification_NoActionBar_Payment_Transparent_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.CancelJob"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.UserProfilePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ProfileOtpPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.MyJobDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ProvidersFilter"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ViewProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.PaymentPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.PaymentWebView"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.RatingPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ChatPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.hoperrush.app.ChatListPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ForgotPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ForgotPasswordOtp"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.ResetPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme" />
+        <activity
+            android:name="com.hoperrush.app.FareSummary"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.PaymentNew"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.Card_list_Details"
+            android:label="@string/title_activity_card_list__details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+        <activity android:name="com.hoperrush.app.Paypalwebview" />
+        <activity android:name="com.hoperrush.app.Trackyourride" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.hoperrush.app.FBRegisterpage" />
+        <activity android:name="com.hoperrush.app.Facebookotppage" />
+        <activity
+            android:name="com.hoperrush.app.NewAppointmentpage"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.hoperrush.app.Reviewimageviewclass"
+            android:hardwareAccelerated="false" />
+        <activity android:name="com.hoperrush.app.Profilpictureview" />
+        <activity
+            android:name="com.hoperrush.fragment.Viewprofilefragment"
+            android:theme="@style/NoActionBar_Theme" />
+        <activity android:name="com.hoperrush.fragment.TaskerProfileView" />
+        <activity android:name="com.hoperrush.fragment.TaskerReviewclass" />
+        <activity android:name="com.hoperrush.app.Maptaskerslist" />
+        <activity android:name="com.hoperrush.app.TransactionMenuActivity" />
+        <activity android:name="com.hoperrush.app.TransactionDetailActivity" />
+        <activity android:name="com.hoperrush.app.ReviewMenuActivity" />
+        <activity android:name="com.hoperrush.app.NotificationMenuActivity" />
+        <activity android:name="com.hoperrush.fragment.Fragment_Map_Home_Page" />
+        <activity
+            android:name="com.hoperrush.app.Map_Location_Search"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperrush.app.TransactionTabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.hoperrush.fragment.MyTaskTransaction" />
+        <activity android:name="com.hoperrush.fragment.MyWalletTransaction"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.hoperrush.app.MaidacPaypalMoneyWebView"></activity>
+        <service android:name="com.hoperrush.core.socket.ChatMessageService" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <activity
+            android:name="com.hoperrush.app.Terms_Conditions"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+    </application>
+
+</manifest>

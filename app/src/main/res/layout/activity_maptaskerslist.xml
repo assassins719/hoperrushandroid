@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hoperrush.app.Maptaskerslist">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/header"
+        android:background="@color/app_color">
+
+        <RelativeLayout
+            android:id="@+id/myJob_detail_headerBar_left_layout"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+            <ImageView
+                android:id="@+id/headerBar_imageView"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_arrow" />
+
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/myJob_detail_headerBar_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Taskers List"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/taskerlistview"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/list_image"/>
+    </RelativeLayout>
+    <fragment
+        android:id="@+id/myJobs_detail_mapView"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="false"
+        android:layout_below="@+id/header"/>
+</RelativeLayout>

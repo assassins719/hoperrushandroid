@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5ED">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@xml/layout_curve_white_background">
+
+        <RatingBar
+            android:id="@+id/provider_rating"
+            style="@style/CustomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:isIndicator="true" />
+
+        <com.hoperrush.core.widgets.RoundedImageView
+            android:id="@+id/providerimg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/hoperrush_backgroud" />
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/providername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/providerimg"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:text="vinuselvaraj"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/provider_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/providername"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:text="default company"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/dummy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/provider_company_name"
+            android:text="Availablity :"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_avail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/provider_rating"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp">
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/provider_availableTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Availablity :"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/provider_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/provider_availableTv"
+                android:text="jbkh"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_minimumcost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout_avail"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp">
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/provider_mincostTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Min Cost :"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/provider_mincost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/provider_mincostTv"
+                android:text="jbkh"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/providers_option"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/dummy"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="#252525">
+
+            <Button
+                android:id="@+id/chat_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/myJob_detail_requestSubmitted_detail_button_view"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                android:background="#252525"
+                android:text="@string/chat"
+                android:textColor="#EEEEEE"
+                android:textSize="14sp" />
+
+
+            <View
+                android:id="@+id/myJob_detail_requestSubmitted_detail_button_view"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                android:background="#252525" />
+
+
+            <View
+                android:id="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF" />
+
+            <Button
+                android:id="@+id/confirmbook_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/myJob_detail_requestSubmitted_response_button_view"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                android:background="#252525"
+                android:text="@string/confirmbook"
+                android:textColor="#EEEEEE"
+                android:textSize="14sp" />
+
+            <!--<View
+                android:id="@+id/myJob_detail_requestSubmitted_response_button_view"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/myJob_detail_requestSubmitted_detail_button_center_view"
+                android:background="#252525"
+                android:visibility="gone"/>-->
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

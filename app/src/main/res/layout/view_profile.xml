@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+
+    <com.hoperrush.core.parallaxscrollview.ParallaxScrollView
+        android:id="@+id/view_profile_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/view_profile_bottom_chatAndCall_layout"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:alpha_factor="1.9"
+        app:parallax_factor="1.9">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+
+            <RelativeLayout
+                android:id="@+id/view_profile_header_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="170dp"
+                android:background="#EEEEEE">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/plumber_banner_image" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#73000000">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:minHeight="?attr/actionBarSize">
+
+                        <RelativeLayout
+                            android:id="@+id/view_profile_headerBar_left_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="fill_parent"
+                            android:background="#00000000">
+
+                            <ImageView
+                                android:id="@+id/headerBar_imageView"
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/back_arrow" />
+                        </RelativeLayout>
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/view_profile_headerBar_title_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/view_profile_headerBar_left_layout"
+                            android:text=""
+                            android:textColor="#ffffff"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/view_profile_bottom_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view_profile_header_layout"
+                android:background="#EEEEEE">
+
+                <com.hoperrush.core.widgets.RoundedImageView
+                    android:id="@+id/view_profile_userImageView"
+                    android:layout_width="61dp"
+                    android:layout_height="61dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_UserName_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/view_profile_userImageView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/view_profile_userImageView"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <RatingBar
+                    android:id="@+id/view_profile_user_ratingBar"
+                    style="@style/CustomRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/view_profile_UserName_TextView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@+id/view_profile_userImageView"
+                    android:isIndicator="true"
+                    android:numStars="5" />
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_about_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_userImageView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/view_profile_label_about"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/myJobs_detail_location_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/view_profile_about_label"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#CBCBCD"
+                    android:visibility="gone" />
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_bio_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_userImageView"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/view_profile_label_bio"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_bio_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_bio_label"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#9E9D99"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_category_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_bio_textView"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/view_profile_label_category"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_category_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_category_label"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#9E9D99"
+                    android:textSize="14sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_TXT_mobilenumber_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_category_textView"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/view_profile_TXT_mobilenumber_hint"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/view_profile_TXT_mobilenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_TXT_mobilenumber_hint"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#9E9D99"
+                    android:textSize="14sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/addresshint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_profile_TXT_mobilenumber"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Address :"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/addresstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addresshint"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#9E9D99"
+                    android:textSize="14sp" />
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/view_profile_category_textView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#9E9D99"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </com.hoperrush.core.parallaxscrollview.ParallaxScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/view_profile_bottom_chatAndCall_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E8A68C">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/view_profile_chat_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#026CB6"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/view_profile_chat_icon" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/myJobs_label_chat"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/view_profile_call_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#017500"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/view_profile_phone_icon" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/view_profile_label_call"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

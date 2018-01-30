@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <com.hoperrush.core.widgets.RoundedImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sub_category_image"/>
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sub_category_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:textColor="#4e4e4e"
+            android:text="genereal plumbing service"
+            android:textSize="8sp"
+            android:id="@+id/sub_category_text"
+            android:paddingBottom="10dp"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="#000"
+            android:layout_centerInParent="true"
+            android:id="@+id/fav_view"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backround_filters">
+
+    <RelativeLayout
+        android:id="@+id/subcategories_sorting_toplayout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/appmain_color"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/cancel_sorting_clearlayout"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/closefacebook"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/subcategories_sorting_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="#cdcdcd" />
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="Sorting"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subcategories_sorting_toplayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/subcategories_sortingname_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/filter_txt_shape">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="sans"
+            android:id="@+id/name_text"/>
+
+        <ImageView
+            android:id="@+id/subcategories_sorting_checkename"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/subcategories_sorting_date_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/subcategories_sortingname_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/filter_txt_shape">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Date"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="sans"
+            android:id="@+id/date_text"/>
+
+        <ImageView
+            android:id="@+id/sorting_checkedate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/dates_cardView_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subcategories_sorting_date_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="#00000000">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/filter_page_cardView_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="#eeeeee"
+            card_view:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#dedede">
+
+                <RelativeLayout
+                    android:id="@+id/myjooobsfrom_page_date_select_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/appointment_page_time_view"
+                    android:background="@drawable/filter_txt_shape">
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/from_date_select_textView_myjobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="From"
+                        android:textColor="#000000"
+
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/appointment_page_time_view"
+                    android:layout_width="2px"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff" />
+
+                <RelativeLayout
+                    android:id="@+id/myjobstodate_select_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/appointment_page_time_view"
+                    android:background="@drawable/filter_txt_shape">
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/todate_select_textViewmyjobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="To"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/dummy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filter_page_cardView_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:text="To"
+            android:textColor="@color/app_color_button"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/tvorderby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dates_cardView_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:text="OrderBy"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:typeface="sans" />
+
+
+    <RelativeLayout
+        android:id="@+id/subcategories_sorting_ascending_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvorderby"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/filter_txt_shape">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Ascending"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/subcategories_ascendingsorting_ascending"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/subcategories_sorting_descending_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/subcategories_sorting_ascending_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/filter_txt_shape">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Descending"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/checkeddescending"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/bookingfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/subcategories_sorting_descending_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Filter By"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:typeface="sans" />
+
+    <RelativeLayout
+        android:id="@+id/today_booking"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bookingfilter"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/filter_txt_shape">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Today's Booking"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="sans"
+            android:id="@+id/today_booking_text"/>
+
+        <ImageView
+            android:id="@+id/today_booking_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recent_booking"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/today_booking"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/filter_txt_shape">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Recent Booking"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="sans"
+            android:id="@+id/recent_booking_text"/>
+
+        <ImageView
+            android:id="@+id/recent_booking_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkbox"
+            android:visibility="gone"
+          />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/upcoming_booking"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/recent_booking"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/filter_txt_shape">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Upcoming Booking"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="sans"
+            android:id="@+id/upcoming_booking_text"/>
+
+        <ImageView
+            android:id="@+id/upcoming_booking_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sorting_apply_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/upcoming_booking"
+        android:layout_centerHorizontal="true"
+        android:background="@color/appmain_color"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:id="@+id/subcategories_sorting_view2"
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:layout_alignParentTop="true"
+            android:background="#cdcdcd" />
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Apply"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

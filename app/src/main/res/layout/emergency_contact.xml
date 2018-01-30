@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="#E1E1E1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E1E1E1">
+
+        <include
+            android:id="@+id/emergency_contact_headerBar_container_header"
+            layout="@layout/toolbar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/emergency_contact_save_layout"
+            android:layout_below="@+id/emergency_contact_headerBar_container_header"
+            android:background="#00000000"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#00000000">
+
+                <RelativeLayout
+                    android:id="@+id/emergency_contact_info_relativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#E6ffffff">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/emergency_contact_name_editText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/edittext_background"
+                        android:hint="@string/emergencyContact_label_enterName_textView"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                        android:textSize="14sp"
+                        app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                        app:met_autoValidate="true"
+                        app:met_baseColor="#00000000"
+                        app:met_clearButton="false"
+                        app:met_errorColor="#FFFFFF"
+                        app:met_floatingLabel="none"
+                        app:met_floatingLabelTextColor="#FFFFFF"
+                        app:met_hideUnderline="true"
+                        app:met_iconPadding="0dp"
+                        app:met_primaryColor="#00000000"
+                        app:met_textColor="#3f3e3e"
+                        app:met_textColorHint="#9b9b99"
+                        app:met_typeface="fonts/Roboto-Regular.ttf"
+                        app:met_underlineColor="#00000000"/>
+
+                    <View
+                        android:id="@+id/emergency_contact_view1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/emergency_contact_name_editText"
+                        android:layout_marginTop="1px"
+                        android:background="#9b9b9b"/>
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/emergency_contact_country_code_editText"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/emergency_contact_view1"
+                        android:background="@drawable/edittext_background"
+                        android:digits="1234567890+"
+                        android:hint="@string/emergencyContact_label_enterCode_textView"
+                        android:inputType="phone"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                        android:textSize="14sp"
+                        app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                        app:met_autoValidate="true"
+                        app:met_baseColor="#00000000"
+                        app:met_clearButton="false"
+                        app:met_errorColor="#FFFFFF"
+                        app:met_floatingLabel="none"
+                        app:met_floatingLabelTextColor="#FFFFFF"
+                        app:met_hideUnderline="true"
+                        app:met_iconPadding="0dp"
+                        app:met_primaryColor="#00000000"
+                        app:met_textColor="#3f3e3e"
+                        app:met_textColorHint="#9b9b99"
+                        app:met_typeface="fonts/Roboto-Regular.ttf"
+                        app:met_underlineColor="#00000000"/>
+
+
+                    <View
+                        android:id="@+id/emergency_contact_view2"
+                        android:layout_width="1px"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/emergency_contact_view1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toRightOf="@+id/emergency_contact_country_code_editText"
+                        android:background="#9b9b9b"/>
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/emergency_contact_mobile_editText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/emergency_contact_view1"
+                        android:layout_toRightOf="@+id/emergency_contact_view2"
+                        android:background="@drawable/edittext_background"
+                        android:digits="1234567890"
+                        android:hint="@string/emergencyContact_label_enter_mobileNo_textView"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                        android:textSize="14sp"
+                        app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                        app:met_autoValidate="true"
+                        app:met_baseColor="#00000000"
+                        app:met_clearButton="false"
+                        app:met_errorColor="#FFFFFF"
+                        app:met_floatingLabel="none"
+                        app:met_floatingLabelTextColor="#FFFFFF"
+                        app:met_hideUnderline="true"
+                        app:met_iconPadding="0dp"
+                        app:met_primaryColor="#00000000"
+                        app:met_textColor="#3f3e3e"
+                        app:met_textColorHint="#9b9b99"
+                        app:met_typeface="fonts/Roboto-Regular.ttf"
+                        app:met_underlineColor="#00000000"/>
+
+
+                    <View
+                        android:id="@+id/emergency_contact_view3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/emergency_contact_country_code_editText"
+                        android:layout_centerHorizontal="true"
+                        android:background="#9b9b9b"/>
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/emergency_contact_email_editText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/emergency_contact_view3"
+                        android:background="@drawable/edittext_background"
+                        android:hint="@string/emergencyContact_label_enterEmail_id_textView"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                        android:textSize="14sp"
+                        app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                        app:met_autoValidate="true"
+                        app:met_baseColor="#00000000"
+                        app:met_clearButton="false"
+                        app:met_errorColor="#FFFFFF"
+                        app:met_floatingLabel="none"
+                        app:met_floatingLabelTextColor="#FFFFFF"
+                        app:met_hideUnderline="true"
+                        app:met_iconPadding="0dp"
+                        app:met_primaryColor="#00000000"
+                        app:met_textColor="#3f3e3e"
+                        app:met_textColorHint="#9b9b99"
+                        app:met_typeface="fonts/Roboto-Regular.ttf"
+                        app:met_underlineColor="#00000000"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/emergency_contact_delete_contact_layout"
+                    android:layout_width="160dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/emergency_contact_info_relativeLayout"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/trash_imageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/trash_icon"/>
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/emergency_contact_delete_contact_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/trash_imageView"
+                        android:text="@string/emergencyContact_label_here_move_contact_textView"
+                        android:textColor="#3f3e3e"
+                        android:textSize="16sp"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emergency_contact_info_relativeLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/contactbutton">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Send Mail"
+                        android:background="@color/app_color_button"
+                        android:textColor="#FFF"
+                        android:id="@+id/contact"
+                        android:textAllCaps="false"
+                        />
+
+                </RelativeLayout>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/emergency_contact_content_label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emergency_contact_delete_contact_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="@string/emergencyContact_label_list_textView"
+                    android:textColor="#727270"
+                    android:textSize="14sp"/>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/emergency_contact_content_label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emergency_contact_content_label1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="@string/emergencyContact_label_note_textView"
+                    android:textColor="#727270"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/emergency_contact_save_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_color_button">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/emergencyContact_label_save_contact_textView"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

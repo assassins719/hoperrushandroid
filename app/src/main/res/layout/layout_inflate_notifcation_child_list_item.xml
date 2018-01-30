@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="13dp"
+    android:background="#3300954a"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/layout_inflate_notification_child_list_item_TXT_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/layout_inflate_notification_child_list_item_TXT_time"
+        android:text="child"
+        android:textColor="@color/grey_text"
+        android:textSize="14sp"
+       />
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/layout_inflate_notification_child_list_item_TXT_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="time"
+        android:textColor="@color/grey_text"
+        android:textSize="13sp"
+       />
+</RelativeLayout>

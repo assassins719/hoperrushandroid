@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:layout_above="@+id/linearlayout_footer_additem_final1" >
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2">
+
+        <TextView
+            android:id="@+id/jobidtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="JOB_ID"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/jobidtext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/circleshape">
+
+            <TextView
+                android:id="@+id/amounttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imageView1_discover_sub_details_adapter_profileimage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/card"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/rel"
+            android:layout_marginTop="5dp"
+            android:background="#000000"></View>
+
+        <LinearLayout
+            android:id="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_image1"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/tag" />
+
+            <TextView
+                android:id="@+id/Coupon_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="13dp"
+                android:gravity="center_horizontal"
+                android:text="I have a Promo code"
+                android:textColor="#3d3d3d"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/add_coupon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/Coupon_code"
+                android:src="@drawable/plus" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_image"
+            android:layout_width="wrap_content"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/layout_one"
+            android:layout_marginTop="2dp"
+            android:background="#000000"></View>
+
+        <LinearLayout
+            android:id="@+id/Linear_Coupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_image"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/coupon_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:hint="Enter coupon code" />
+
+            <Button
+                android:id="@+id/coupon_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="#062647"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Apply"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/Linear_Coupon"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/Card"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/card"
+                android:tag="card_inactive" />
+
+            <TextView
+                android:id="@+id/Card_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Card"
+                android:layout_below="@+id/Card"
+                android:layout_marginLeft="15dp"
+                android:text="Card"
+                android:textColor="#848484"
+                android:textSize="15sp" />
+
+            <ImageView
+
+                android:id="@+id/Cash"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Card_text"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cash"
+                android:tag="cash_inactive" />
+
+            <TextView
+                android:id="@+id/Cash_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Cash"
+                android:layout_below="@+id/Cash"
+                android:layout_marginLeft="15dp"
+                android:text="Cash"
+                android:textColor="#848484"
+                android:textSize="15sp" />
+
+            <ImageView
+
+                android:id="@+id/pay"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Cash_text"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/paypal"
+                android:tag="pay_inactive" />
+
+            <TextView
+                android:id="@+id/Nte_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Nte_bank"
+                android:layout_alignRight="@+id/Nte_bank"
+                android:layout_below="@+id/Nte_bank"
+                android:layout_marginLeft="12dp"
+                android:text="Paypal"
+                android:textColor="#848484"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/Wallet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Nte_text"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/wallet"
+                android:tag="wallet_inactive" />
+
+            <TextView
+
+                android:id="@+id/Wallet_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Nte_text"
+                android:layout_alignRight="@+id/Nte_text"
+                android:layout_below="@+id/Wallet"
+                android:layout_marginLeft="15dp"
+                android:text="Wallet"
+                android:textColor="#848484"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/Relative_check_box"
+            android:layout_width="260dp"
+            android:layout_height="350dp"
+            android:layout_below="@+id/Linear_Coupon"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/Card_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/payment_instruction"
+                android:textColor="#848484"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Card_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Card_text1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="And Complete Payment"
+                android:textColor="#848484"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+
+            <CheckBox
+                android:id="@+id/check_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Card_text2"
+                android:layout_marginTop="10dp"
+                android:text="@string/terms_condition"
+                android:textColor="#848484" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/linearlayout_footer_additem_final1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#062647">
+
+        <TextView
+            android:id="@+id/textview_manage_footer_additem_final1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Make Payment"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>
+
+

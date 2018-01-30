@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/categories_detailPage_swipeToRefresh_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000">
+
+        <include
+            android:id="@+id/categories_detailPage_headerBar_container_header"
+            layout="@layout/toolbar_layout_without_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/categories_detailPage_noInternet_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/categories_detailPage_headerBar_container_header"
+            android:background="#E8E8E8"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+                <include
+                    android:id="@+id/categories_detailPage_noInternet_container"
+                    layout="@layout/no_internet_connection"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/categories_detailPage_main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/categories_detailPage_headerBar_container_header"
+            android:background="#ffffff"
+            android:visibility="visible">
+
+            <com.hoperrush.core.parallaxscrollview.ParallaxScrollView
+                android:id="@+id/categories_detailPage_main_parallaxScrollview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"
+                app:alpha_factor="1.9"
+                app:parallax_factor="1.9">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/categories_detailPage_main_headerLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        tools:ignore="HardcodedText">
+
+                        <ImageView
+                            android:id="@+id/categories_detailPage_header_image"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <View
+                            android:id="@+id/category_single_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="visible"
+                            android:background="#33000000"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/categories_detailPage_main_bottomLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/categories_detailPage_main_headerLayout"
+                        android:background="#00000000">
+
+                        <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                            android:id="@+id/categories_detailPage_listView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp"
+                            android:background="#ffffff"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </com.hoperrush.core.parallaxscrollview.ParallaxScrollView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

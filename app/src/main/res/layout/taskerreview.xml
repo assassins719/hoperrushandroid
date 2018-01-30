@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/background_login_curve">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view"
+            android:background="#A9A9A9"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/view">
+
+            <com.hoperrush.core.widgets.RoundedImageView
+                android:id="@+id/reviwes_profileimg"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nouserimg" />
+            <TextView
+                android:id="@+id/profile_review_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reviwes_profileimg"
+                android:layout_toLeftOf="@+id/layout_inflate_review_list_item_RGB"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginLeft="10dp"
+                android:text="Username"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"/>
+            <TextView
+                android:id="@+id/profile_rating_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reviwes_profileimg"
+                android:layout_below="@+id/profile_review_name"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#A9A9A9"
+                android:text="10:33 am - 11:33 am"
+                android:layout_marginTop="5dp"/>
+
+            <RatingBar
+                android:id="@+id/layout_inflate_review_list_item_RGB"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3.5"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:id="@+id/profile_review_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reviwes_profileimg"
+                android:layout_below="@+id/profile_rating_time"
+                android:textSize="13sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:textColor="#000"
+                android:text="Commentsxzvxcvxcvxcvxcvxcvxcvcxvcxvcxvxcvxccxvxcvxcvxcvxcvxcvxcvcxvcxvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcv"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

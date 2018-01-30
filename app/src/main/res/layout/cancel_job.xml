@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <include
+        android:id="@+id/cancel_job_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/cancel_job_headerBar_container_header"
+        android:background="#00000000"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/cancel_job_why_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/cancel_job_why_label"
+                android:textColor="#4e4e4e"
+                android:textSize="17sp" />
+
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:id="@+id/cancel_job_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/cancel_job_why_label"
+                android:layout_marginTop="13dp"
+                android:background="#ffffff"
+                android:divider="@null"></com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

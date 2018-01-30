@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <include
+        android:id="@+id/add_address_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/add_address_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/add_address_page_done_button"
+        android:layout_below="@+id/add_address_headerBar_container_header"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/add_address_edit_contact_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/add_address_label_edit_contact"
+                android:textColor="#4e4e4e"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/add_address_info_relativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_address_edit_contact_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chatprofileview"
+                android:visibility="visible">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_name_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/edittext_background"
+                    android:focusable="false"
+                    android:hint="@string/emergencyContact_label_enterName_textView"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+                <View
+                    android:id="@+id/add_address_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/add_address_name_editText"
+                    android:layout_marginTop="1px"
+                    android:background="#9b9b9b" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_country_code_editText"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_view1"
+                    android:background="@drawable/edittext_background"
+                    android:clickable="false"
+                    android:digits="1234567890+"
+                    android:focusable="false"
+                    android:hint="@string/emergencyContact_label_enterCode_textView"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+
+                <View
+                    android:id="@+id/add_address_view2"
+                    android:layout_width="1px"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_view1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/add_address_country_code_editText"
+                    android:background="#9b9b9b" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_mobile_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_view1"
+                    android:layout_toRightOf="@+id/add_address_view2"
+                    android:background="@drawable/edittext_background"
+                    android:digits="1234567890"
+                    android:focusable="false"
+                    android:hint="@string/emergencyContact_label_enter_mobileNo_textView"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+
+                <View
+                    android:id="@+id/add_address_view3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/add_address_country_code_editText"
+                    android:layout_centerHorizontal="true"
+                    android:background="#9b9b9b" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_email_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_view3"
+                    android:background="@drawable/edittext_background"
+                    android:focusable="false"
+                    android:hint="@string/emergencyContact_label_enterEmail_id_textView"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+            </RelativeLayout>
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/add_address_enter_address_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_address_info_relativeLayout"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/add_address_label_enter_address"
+                android:textColor="#4e4e4e"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/add_address_info_relativeLayout"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/add_address_BTN_currentaddress"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/locationbutton" />
+
+                <ImageButton
+                    android:id="@+id/add_address_BTN_clear"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/icon_address_clear" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_address_fill_address_relativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_address_enter_address_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chatprofileview">
+
+
+                <!--<com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_locality_editText"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_address_label_your_locality"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"/>-->
+
+                <RelativeLayout
+                    android:id="@+id/book_address_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/edittext_background">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/book_navigation_search_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="20dp"
+                        android:cursorVisible="false"
+                        android:hint="Enter Locality"
+                        android:singleLine="true"
+                        android:textColor="@color/editText_color_textView"
+                        android:textSize="13sp"
+                        app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                        app:met_autoValidate="true"
+                        app:met_baseColor="#00000000"
+                        app:met_clearButton="false"
+                        app:met_errorColor="#FFFFFF"
+                        app:met_floatingLabel="none"
+                        app:met_floatingLabelTextColor="#FFFFFF"
+                        app:met_hideUnderline="true"
+                        app:met_iconPadding="0dp"
+                        app:met_primaryColor="#00000000"
+                        app:met_textColor="@color/editText_color_textView"
+                        app:met_textColorHint="#9b9b99"
+                        app:met_typeface="fonts/Roboto-Regular.ttf"
+
+                        app:met_underlineColor="#00000000" />
+                </RelativeLayout>
+
+
+                <!--   <AutoCompleteTextView
+                       android:id="@+id/add_address_locality_autoCompleteTextView"
+                       android:layout_width="fill_parent"
+                       android:layout_height="50dp"
+                       android:layout_alignParentTop="true"
+                       android:background="@drawable/edittext_background"
+                       android:hint="@string/add_address_label_your_locality"
+                       android:inputType="text"
+                       android:paddingLeft="10dp"
+                       android:paddingRight="10dp"
+                       android:imeOptions="actionNext"
+                       android:textColor="@color/editText_color_textView"
+                       android:textColorHint="#9b9b99"
+                       android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                       android:textSize="14sp"/>-->
+
+
+                <View
+                    android:id="@+id/add_address_locality_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/book_address_layout"
+                    android:layout_marginTop="1px"
+                    android:background="#9b9b9b" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_houseNo_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_locality_view1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_address_label_houseNo"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+                <View
+                    android:id="@+id/add_address_houseNo_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/add_address_houseNo_editText"
+                    android:layout_marginTop="1px"
+                    android:background="#9b9b9b" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_landmark_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_houseNo_view1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_address_label_landmark"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+                <View
+                    android:id="@+id/add_address_landmark_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/add_address_landmark_editText"
+                    android:layout_marginTop="1px"
+                    android:background="#9b9b9b" />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_state_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_landmark_view1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_address_label_state"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+                <View
+                    android:id="@+id/add_address_state_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/add_address_state_editText"
+                    android:layout_marginTop="1px"
+                    android:background="#9b9b9b" />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_city_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_state_view1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_address_label_city"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+                <View
+                    android:id="@+id/add_address_city_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/add_address_city_editText"
+                    android:layout_marginTop="1px"
+                    android:background="#9b9b9b" />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_country_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_city_view1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_address_label_country"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+                <View
+                    android:id="@+id/add_address_country_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/add_address_country_editText"
+                    android:layout_marginTop="1px"
+                    android:background="#9b9b9b" />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/add_address_zipCode_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/add_address_country_view1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_address_label_zipCode"
+
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="@color/editText_color_textView"
+                    app:met_textColorHint="#9b9b99"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+            </RelativeLayout>
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@+id/add_address_fill_address_relativeLayout"
+                android:layout_marginTop="15dp"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/add_address_page_done_button"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_color_button"
+        android:text="@string/add_address_label_done"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+</RelativeLayout>

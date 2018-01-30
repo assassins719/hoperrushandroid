@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rating_layout_header"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_color">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/rating_textview_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/rating_header_textView"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/rating_header_skip_layout"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/rating_header_skip_textView"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/rating_toolbar_shadow_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/rating_layout_header"
+        android:background="@xml/toolbar_shadow" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rating_submit_layout"
+        android:layout_below="@+id/rating_toolbar_shadow_layout"
+        android:background="#00000000"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+
+            <RelativeLayout
+                android:id="@+id/Add_imag_ratings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <com.hoperrush.core.widgets.CircularImageView
+                    android:id="@+id/ImageView_rating"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#00000000"
+                    android:src="@drawable/no_profile_image_avatar_icon" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/rating_page_taskernameTXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ImageView_rating"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black_color"
+                    android:visibility="visible"
+                    android:text="asdasdas"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:id="@+id/rating_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Add_imag_ratings"
+                android:background="#ffffff"
+                android:divider="@null"
+                ></com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+
+            <EditText
+                android:id="@+id/rating_comment_editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating_listView"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@xml/edittext_curve_background_grey"
+                android:gravity="top|left"
+                android:hint="@string/rating_header_comment_textView"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:lines="30"
+                android:minLines="5"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textColor="#4e4e4e"
+                android:textColorHint="#4e4e4e"
+                android:textSize="13sp"
+                />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/rating_comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@+id/rating_comment_editText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/rating_page_add_ImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="330dp"
+                android:src="@drawable/add_icon"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="310dp"
+                android:text="@string/upload_image"
+                android:textColor="@color/back_color"
+                android:visibility="gone"/>
+
+
+            <ImageView
+                android:id="@+id/image_upload"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="360dp"
+                android:background="#00000000"
+
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rating_submit_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#076435">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/rating_header_submit_textView"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

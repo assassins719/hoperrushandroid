@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/appointment_more_address_single_isAddressSelected_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/appointment_more_address_single_home_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/home_address_icon" />
+
+        <RelativeLayout
+            android:id="@+id/appointment_more_address_single_delete_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="#00000000">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/delete_icon" />
+
+        </RelativeLayout>
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/appointment_more_address_single_addressText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/appointment_more_address_single_delete_layout"
+            android:layout_toRightOf="@+id/appointment_more_address_single_home_icon"
+            android:gravity="left"
+            android:text="gbfdgv"
+            android:textColor="#7c7b7b"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/check_id"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/appointment_more_address_single_delete_layout"
+            android:layout_marginTop="10dp"
+           android:layout_toRightOf="@+id/appointment_more_address_single_addressText"
+            android:src="@drawable/checkmark"
+            android:visibility="gone"/>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/appointment_more_address_single_delete_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_viewgrey">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/layout_inflate_pdf_listitem_cardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="1dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="1dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_inflate_messagechat_list_item_RL_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/layout_inflate_messagechat_list_item_IMG"
+                android:orientation="vertical">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/job_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="Category"
+                    android:textColor="@android:color/black" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/job_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="Job_id"
+                    android:textColor="@color/grey_text" />
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="Username"
+                    android:textColor="@color/grey_text" />
+            </LinearLayout>
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="01/21/2017,10:37 am"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/date"
+                android:textColor="@color/grey_text"></com.hoperrush.core.widgets.CustomTextView>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/date"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/green_dot"
+                android:id="@+id/green_dot"
+                android:visibility="gone"/>
+
+            <com.hoperrush.core.widgets.CircularImageView
+                android:id="@+id/layout_inflate_messagechat_list_item_IMG"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/myJobs_single_scheduled_date_textView"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

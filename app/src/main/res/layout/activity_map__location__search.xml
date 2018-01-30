@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:id="@+id/location_search_actionbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@color/app_color">
+
+        <RelativeLayout
+            android:id="@+id/location_search_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:src="@drawable/back_arrow"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/location_search_editText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/location_search_progressBar"
+            android:layout_toRightOf="@+id/location_search_back_layout"
+            android:background="@drawable/edittext_background_white"
+            android:hint="@string/estimate_price_label_search"
+            android:imeOptions="actionDone"
+            android:inputType="textImeMultiLine"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textCursorDrawable="@drawable/edittext_cursor_color_white"
+            android:textSize="14sp"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/location_search_progressBar"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/location_search_toolbar_shadow_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/location_search_actionbar_layout"
+        android:background="@xml/toolbar_shadow"/>
+
+    <RelativeLayout
+        android:id="@+id/location_search_alert_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/location_search_toolbar_shadow_layout"
+        android:background="#D9030303"
+        android:visibility="gone">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/location_search_alert_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="No Internet Connection"
+            android:textColor="#FCC900"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/location_search_actionbar_layout"
+        android:visibility="visible"
+        android:id="@+id/map_layout">
+
+
+        <fragment
+            android:id="@+id/drop_location_select_view_map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+
+        <ImageView
+            android:id="@+id/drop_location_select_drop_marker"
+            android:layout_width="220dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/drop_location_select_center_view1"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mapicon" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/pickupdroplayout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/chatprofileview">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:layout_marginTop="22dp"
+                android:id="@+id/search_image"
+                android:layout_marginLeft="10dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/location_marker"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_selected_address"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/appmain_color"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/search_image"
+                android:gravity="center_vertical"
+                android:layout_marginTop="19dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/map_layout_address_text"
+                android:layout_toLeftOf="@+id/favourite_layout">
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_address"
+                    android:textColor="#9b9b99"
+                    android:textSize="15sp"
+                    android:id="@+id/map_address_text"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/favourite_layout"
+                android:visibility="gone">
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="25dp"
+                    android:background="#9b9b99"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/fav_view"
+                    android:layout_alignParentLeft="true">
+
+                </View>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/heart_icon"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <android.support.v7.widget.CardView
+            android:id="@+id/book_cardview_current_location_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/pickupdroplayout"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            card_view:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="5dp">
+
+            <ImageView
+                android:id="@+id/book_current_location_imageview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/current_location_icon" />
+        </android.support.v7.widget.CardView>
+
+
+        <View
+            android:id="@+id/drop_location_select_center_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible" />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/appmain_color"
+            android:id="@+id/done"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:textColor="#FFF"
+                android:text="Done"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/location_search_listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_search_alert_layout"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+        android:visibility="gone"/>
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/location_search_empty_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/location_search_listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/estimate_price_label_place_notAvailable"
+        android:textColor="#666666"
+        android:textSize="17sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

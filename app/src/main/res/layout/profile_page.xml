@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/profile_page_headerBar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:background="#778899"
+        android:minHeight="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/profile_page_headerBar_back_layout"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+            <ImageView
+                android:id="@+id/headerBar_imageView"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_arrow" />
+
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/profile_page_headerBar_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/profile_page_header_textView"
+            android:textColor="#FFF"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/profile_page_logout_button"
+        android:layout_below="@+id/profile_page_headerBar_layout"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#778899">
+
+            <com.hoperrush.core.widgets.CircularImageView
+                android:id="@+id/profile_page_profile_ImageView"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="#00000000"
+                />
+
+            <ImageView
+                android:id="@+id/profile_page_add_ImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="55dp"
+                android:layout_toRightOf="@+id/profile_page_profile_ImageView"
+                android:src="@drawable/add_icon" />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/profile_page_userName_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_page_profile_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:text="User Name"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/profile_page_userName_textView">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/layout_signIn_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/profile_label_signInDetails"
+                    android:textColor="#FFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/profile_email_layout_whole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_signIn_details"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/chatprofileview"
+                    android:paddingBottom="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/profile_email_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="#00000000">
+
+                        <ImageView
+                            android:id="@+id/email_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/profile_email" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_emailId_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/email_icon"
+                            android:text=""
+                            android:textColor="#4e4e4e"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_email_textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_emailId_textView"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@+id/email_icon"
+                            android:text="@string/profile_label_emailId"
+                            android:textColor="#9b9b99"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/profile_email_layout"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#9b9b9b" />
+
+                    <RelativeLayout
+                        android:id="@+id/profile_changePassword_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/view1"
+                        android:layout_centerVertical="true"
+                        android:background="#00000000">
+
+                        <ImageView
+                            android:id="@+id/changePassword_icon"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/profile_password" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_changePassword_star_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/changePassword_icon"
+                            android:text="@string/profile_label_signIn_star"
+                            android:textColor="#4e4e4e"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_changePassword_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_changePassword_star_textView"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/changePassword_icon"
+                            android:text="@string/profile_label_signIn_changePassword"
+                            android:textColor="#9b9b99"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/arrow_changPassword"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/arrowdown" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/profile_myDetails_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_email_layout_whole"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/profile_label_signIn_myDetails"
+                    android:textColor="#FFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_myDetails_whole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_myDetails_TextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/chatprofileview">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_username"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="#00000000"
+                        android:paddingBottom="4dp">
+
+                        <ImageView
+                            android:id="@+id/profile_userIcon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/profile_user" />
+
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/profile_userName_editText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toLeftOf="@+id/profile_username_editImage"
+                            android:layout_toRightOf="@+id/profile_userIcon"
+                            android:background="@drawable/edittext_background"
+                            android:cursorVisible="false"
+                            android:gravity="bottom"
+                            android:imeOptions="actionSend"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                            android:textSize="14sp"
+                            app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                            app:met_autoValidate="true"
+                            app:met_baseColor="#00000000"
+                            app:met_clearButton="false"
+                            app:met_errorColor="#FFFFFF"
+                            app:met_floatingLabel="none"
+                            app:met_floatingLabelTextColor="#FFFFFF"
+                            app:met_hideUnderline="true"
+                            app:met_iconPadding="0dp"
+                            app:met_primaryColor="#00000000"
+                            app:met_textColor="#3f3e3e"
+                            app:met_typeface="fonts/Roboto-Regular.ttf"
+                            app:met_underlineColor="#00000000"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"/>
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_userName_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_userName_editText"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/profile_userIcon"
+                            android:text="@string/profile_label_signIn_hintName"
+                            android:textColor="#9b9b99"
+                            android:textSize="14sp" />
+
+
+                        <ImageView
+                            android:id="@+id/profile_username_editImage"
+                            android:layout_width="25dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/edit"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/layout_username"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:background="#9b9b9b" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_mobileNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/view2"
+                        android:layout_centerVertical="true"
+                        android:background="#00000000">
+
+                        <ImageView
+                            android:id="@+id/mobileIcon"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/profile_phone" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/mobileIcon"
+                            android:text="+"
+                            android:textColor="#4e4e4e"
+                            android:textSize="14sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/profile_textView_country_code_layout"
+                            android:layout_width="47dp"
+                            android:layout_height="30dp"
+                            android:layout_toRightOf="@+id/profile_country"
+                            android:background="@drawable/edittext_background">
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/profile_country_code_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="bottom"
+                                android:text=""
+                                android:textColor="#3f3e3e"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_country_code_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_textView_country_code_layout"
+                            android:layout_toRightOf="@+id/profile_country"
+                            android:text="@string/profile_label_signIn_hint_code"
+                            android:textColor="#9b9b99"
+                            android:textSize="14sp" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/profile_edit_phoneNo_editText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toLeftOf="@+id/mobilEdit"
+                            android:layout_toRightOf="@+id/profile_textView_country_code_layout"
+                            android:background="@drawable/edittext_background"
+                            android:digits="0123456789"
+                            android:imeOptions="actionSend"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:paddingLeft="10dp"
+                            android:cursorVisible="false"
+                            android:paddingRight="10dp"
+                            android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                            android:textSize="14sp"
+                            app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                            app:met_autoValidate="true"
+                            app:met_baseColor="#00000000"
+                            app:met_clearButton="false"
+                            app:met_errorColor="#FFFFFF"
+                            app:met_floatingLabel="none"
+                            app:met_floatingLabelTextColor="#FFFFFF"
+                            app:met_hideUnderline="true"
+                            app:met_iconPadding="0dp"
+                            app:met_primaryColor="#00000000"
+                            app:met_textColor="#3f3e3e"
+                            app:met_typeface="fonts/Roboto-Regular.ttf"
+                            app:met_underlineColor="#00000000" />
+
+                        <com.hoperrush.core.widgets.CustomTextView
+                            android:id="@+id/profile_mobile_no_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_edit_phoneNo_editText"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/profile_textView_country_code_layout"
+                            android:text="@string/profile_label_signIn_hint_mobileNo"
+                            android:textColor="#9b9b99"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/mobilEdit"
+                            android:layout_width="25dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/edit" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/layout_myDetails_whole"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/profile_page_logout_button"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appmain_color"
+        android:text="@string/profile_page_signOut_textView"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

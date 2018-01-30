@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.hoperrush.app.NewAppointmentpage">
+
+    <include
+        android:id="@+id/appointment_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appointment_headerBar_container_header"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/add_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/chatprofileview">
+
+                <ImageView
+                    android:id="@+id/appointment_page_add_address_location_icon"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/location_marker" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:text="Add Your Address" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/right_arrow" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/appointment_page_display_address_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_address"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chatprofileview"
+                android:visibility="visible">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_page_your_address_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/appointment_page_more_address_layout"
+                    android:gravity="left"
+                    android:text="@string/appointment_label_your_address"
+                    android:textColor="#7c7b7b"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/appointment_page_more_address_layout"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/appointment_page_more_address_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/more_dot_icon" />
+
+                </RelativeLayout>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_page_your_address_textView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appointment_page_your_address_label"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="#9e9e9e"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/viewdesign1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appointment_page_display_address_layout"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:id="@+id/add_address_view5"
+                    android:layout_width="120dp"
+                    android:layout_height="1px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9b9b9b"
+                    android:layout_toLeftOf="@+id/date_text"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Select Date" />
+
+                <View
+                    android:id="@+id/add_address_view6"
+                    android:layout_width="120dp"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9b9b9b"
+                    android:layout_toRightOf="@+id/date_text"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </RelativeLayout>
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/appointment_page_calendarview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewdesign1"
+                android:layout_marginTop="10dp"
+                app:mcv_arrowColor="@color/caldroid_middle_gray"
+                app:mcv_calendarMode="week"
+                app:mcv_selectionColor="@color/appmain_color"
+                app:mcv_showOtherDates="all"
+                app:mcv_tileHeight="40dp" />
+
+            <RelativeLayout
+                android:id="@+id/viewdesign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appointment_page_calendarview"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:id="@+id/add_address_view3"
+                    android:layout_width="120dp"
+                    android:layout_height="1px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9b9b9b"
+                    android:layout_toLeftOf="@+id/time_text"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Select Time" />
+
+                <View
+                    android:id="@+id/add_address_view4"
+                    android:layout_width="120dp"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9b9b9b"
+                    android:layout_toRightOf="@+id/time_text"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/time_slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewdesign"
+                android:layout_marginTop="30dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="8 AM - 9 AM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="8 AM - 9 AM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+                     </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout1"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="9 AM - 10 AM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="9 AM - 10 AM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout2"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="10 AM - 11 AM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="10 AM - 11 AM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout3"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/appointment_page_cardView_layout"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="11 AM - 12 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="11 AM - 12 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout4"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/appointment_page_cardView_layout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="12 PM - 1 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="12 PM - 1 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout5"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/appointment_page_cardView_layout2"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="1 PM - 2 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="1 PM - 2 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout6"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/appointment_page_cardView_layout3"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="2 PM - 3 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="2 PM - 3 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout7"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/appointment_page_cardView_layout4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="3 PM - 4 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="3 PM - 4 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout8"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/appointment_page_cardView_layout5"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="4 PM - 5 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="4 PM - 5 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout9"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/appointment_page_cardView_layout6"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="5 PM - 6 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="5 PM - 6 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout10"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/appointment_page_cardView_layout7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="6 PM - 7 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="6 PM - 7 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment_page_cardView_layout11"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/appointment_page_cardView_layout8"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="6dp"
+                    app:cardBackgroundColor="#f7fbfc">
+
+                    <RelativeLayout
+                        android:id="@+id/time12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/texttime12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="7 PM - 8 PM"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/texttimevisible12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="7 PM - 8 PM"
+                            android:textColor="#DCDCDC"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/instruction"
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/time_slot"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chatprofileview">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/appointment_page_instruction_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="110dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="top|left"
+                    android:hint="@string/appointment_label_your_instruction"
+                    android:inputType="textMultiLine"
+                    android:lines="30"
+                    android:minLines="6"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#00000000"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#00000000"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="#9e9e9e"
+                    app:met_textColorHint="#7c7b7b"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tasker_view_type"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/instruction"
+                android:layout_marginTop="14dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/type_view1"
+                    android:layout_width="90dp"
+                    android:layout_height="1px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9b9b9b" />
+
+                <TextView
+                    android:id="@+id/viewtype_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Choose View Type" />
+
+                <View
+                    android:id="@+id/type_view2"
+                    android:layout_width="90dp"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9b9b9b" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/viewtype_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/chatprofileview">
+
+                    <RadioGroup
+                        android:id="@+id/type_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="Listview"
+                            android:textColor="#7c7b7b"
+                            android:textSize="14sp"
+                            android:theme="@style/MyRadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/radio_map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Mapview"
+                            android:textColor="#7c7b7b"
+                            android:textSize="14sp"
+                            android:theme="@style/MyRadioButton" />
+                    </RadioGroup>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_below="@+id/tasker_view_type"></RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/searchbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_color_button"
+        android:text="@string/appointment_label_book_now"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+</RelativeLayout>

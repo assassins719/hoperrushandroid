@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_nointernet"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/layout_jobfare_header"
+            android:background="#00000000"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/whoops"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/no_inetnet_whoops_label"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/nointernetimg"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/whoops"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/no_internet_connection_boy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_inetnet_label"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/nointernetimg"
+                android:gravity="center_horizontal"
+                />
+
+            <ImageView
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:id="@+id/nointernet_refresh"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pulltorefreshimg"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

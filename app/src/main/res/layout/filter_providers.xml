@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_edges">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/providers_sorting_toplayout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp">
+
+            <RelativeLayout
+                android:id="@+id/cancel_sorting_clearlayout"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/myJobs_label_cancel"
+                    android:textColor="#0086AC"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/subcategories_sorting_view1"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="#cdcdcd" />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="Sorting"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/filterprovider_rate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/providers_sorting_toplayout"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Price"
+                android:textColor="#0086AC"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <!--<com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar-->
+                <!--android:id="@+id/seekBar"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_below="@+id/view"-->
+                <!--android:layout_marginTop="10dp" />-->
+            <com.appyvet.rangebar.RangeBar
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                custom:tickStart="1"
+                custom:tickInterval="1"
+                android:layout_marginTop="8dp"
+                custom:tickEnd="100"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
+
+            <!--<com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:corner_radius="8"
+                app:min_value="0"
+                app:max_value="100"
+                app:bar_color="#EE88F7"
+                app:bar_highlight_color="#D810EA"
+                android:layout_below="@+id/view"
+                app:left_thumb_color="#8D0D99"
+                app:right_thumb_color="#8D0D99"
+                android:layout_marginTop="10dp"
+                app:left_thumb_color_pressed="#56005E"
+                app:right_thumb_color_pressed="#56005E"
+                app:data_type="_integer"/>-->
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/pricemintv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/seekBar"
+                android:text=""
+                android:textColor="#0086AC"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/pricemaxtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/seekBar"
+                android:text=""
+                android:textColor="#0086AC"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+
+
+            <!--<SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/view"
+                android:layout_below="@+id/view"
+                android:layout_marginTop="10dp" />-->
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/filterprovider_reviwe"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filterprovider_rate"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/reviewtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Customer Rating"
+                android:textColor="#0086AC"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/CustomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/reviewtv"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:numStars="5" />
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/dummyone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:text="To"
+                android:textColor="@color/app_color_button"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+
+          <!--
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:numStars="5"
+                android:layout_below="@+id/reviewtv"
+                android:layout_alignParentStart="true" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filterprovider_distance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filterprovider_reviwe"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/view_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Distance(km)"
+                android:textColor="#0086AC"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_distance" >
+        <EditText
+            android:id="@+id/filter_providers_ET_distance"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_edittext_border"
+            android:digits="0123456789"
+            android:hint="Enter the distance"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:layout_toLeftOf="@+id/km_text"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="14sp"
+        android:textColor="#cdcdcd"
+        android:textStyle="bold"
+        android:text="KM"
+        android:layout_centerVertical="true"
+        android:id="@+id/km_text"
+        android:layout_marginRight="10dp"/>
+      </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filterprovider_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filterprovider_reviwe"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:visibility="gone">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/datetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Date"
+                android:textColor="#0086AC"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+
+            <RelativeLayout
+                android:id="@+id/appointment_page_main_cardView_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/datetv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#00000000">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/filter_page_cardView_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#eeeeee"
+                    card_view:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#dedede">
+
+                        <RelativeLayout
+                            android:id="@+id/from_page_date_select_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_toLeftOf="@+id/appointment_page_time_view"
+                            android:background="#dedede">
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/from_date_select_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="From"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/appointment_page_time_view"
+                            android:layout_width="2px"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#ffffff" />
+
+                        <RelativeLayout
+                            android:id="@+id/todate_select_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@+id/appointment_page_time_view"
+                            android:background="#dedede">
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/todate_select_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="To"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/dummy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/filter_page_cardView_layout"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="To"
+                    android:textColor="@color/app_color_button"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/filterprovider_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filterprovider_date"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:visibility="gone">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/timev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Time"
+                android:textColor="#0086AC"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+
+            <RelativeLayout
+                android:id="@+id/time_cardView_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timev"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="2dp"
+                android:background="#00000000">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/timecardView_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    app:cardBackgroundColor="#eeeeee"
+                    card_view:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/filter_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#dedede">
+
+                        <RelativeLayout
+                            android:id="@+id/time_select_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:background="#dedede">
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/time_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="Time"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/dummy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_cardView_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:text="To"
+                android:textColor="@color/app_color_button"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/provider_filter_apply"
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/filterprovider_distance"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp">
+
+            <View
+                android:id="@+id/views"
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:layout_alignParentTop="true"
+                android:background="#cdcdcd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="APPLY"
+                android:textColor="#0086AC"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

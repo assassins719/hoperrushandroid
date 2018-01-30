@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <com.hoperrush.core.widgets.CircularImageView
+            android:id="@+id/reviwes_profileimg"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/profile" />
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/profile_review_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/reviwes_profileimg"
+            android:text="New Text"
+            android:textColor="#5F9EA0" />
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/profile_review_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_review_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/reviwes_profileimg"
+            android:text="jnbkjfnb.fknb."
+            android:textColor="#6495ED" />
+
+        <RelativeLayout
+            android:id="@+id/reviewimage"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_review_description"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/reviwes_profileimg">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/ratingimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="View Image"
+
+                android:textColor="#5F9EA0" />
+
+        </RelativeLayout>
+
+
+        <RatingBar
+            android:id="@+id/profile_reviwe_ratting"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp" />
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/profile_rating_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/profile_reviwe_ratting"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:text="54656"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

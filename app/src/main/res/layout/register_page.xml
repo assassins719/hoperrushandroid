@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hoperrush_backgroud">
+
+    <RelativeLayout
+        android:id="@+id/register_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent_color">
+
+        <RelativeLayout
+            android:id="@+id/register_header_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:src="@drawable/back_arrow" />
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/register_header_back_layout"
+            android:text="@string/register_label"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/register_layout_header"
+        android:layout_centerHorizontal="true"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/register_logo_imageView"
+                android:layout_width="160dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/hopericon" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_firstname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:hint="@string/register_firstname"
+                android:inputType="text"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/app_cancel_btn_color"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_iconLeft="@drawable/username_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_hideUnderline="false"
+                app:met_underlineColor="#D3D3D3"
+                android:layout_marginRight="10dp"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_lastname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_lastname"
+
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/app_cancel_btn_color"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_iconLeft="@drawable/username_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_hideUnderline="false"
+                app:met_underlineColor="#D3D3D3"
+                android:layout_marginRight="10dp"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_username_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_label_username_hint"
+                android:inputType="textCapSentences"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/app_cancel_btn_color"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_hideUnderline="false"
+                app:met_iconLeft="@drawable/username_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_underlineColor="#D3D3D3" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_email_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_label_email_hint"
+                android:inputType="text"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/app_cancel_btn_color"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_hideUnderline="false"
+
+                app:met_iconLeft="@drawable/email_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_underlineColor="#D3D3D3" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_password_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_label_pwd_hint"
+                android:inputType="text"
+                android:paddingLeft="3dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_@"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/app_cancel_btn_color"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_hideUnderline="false"
+                app:met_iconLeft="@drawable/password_icon"
+                 app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_underlineColor="#D3D3D3" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_confirm_password_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_label_confirm_pwd_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="3dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_@"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/app_cancel_btn_color"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#000"
+                app:met_hideUnderline="false"
+                app:met_iconLeft="@drawable/password_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_underlineColor="#D3D3D3" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/register_country_code_edittext"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="@string/register_label_code_hint"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:paddingRight="3dp"
+                    android:textSize="16sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#D5D4D2"
+                    app:met_clearButton="false"
+                    app:met_errorColor="@color/app_cancel_btn_color"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="#000"
+                    app:met_hideUnderline="false"
+                    app:met_iconLeft="@drawable/phone_icon"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#D5D4D2"
+                    app:met_textColor="@color/white_color"
+                    app:met_textColorHint="#D5D4D2"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#D3D3D3" />
+
+                <View
+                    android:id="@+id/register_view"
+                    android:layout_width="1px"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="21dp"
+                    android:background="#ffffff" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/register_phoneNumber_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="@string/register_label_phone_hint"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="5dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                    android:textSize="16sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#D5D4D2"
+                    app:met_clearButton="true"
+                    app:met_errorColor="@color/app_cancel_btn_color"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="#000"
+                    app:met_hideUnderline="false"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#D5D4D2"
+                    app:met_textColor="@color/white_color"
+                    app:met_textColorHint="#D5D4D2"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#D3D3D3" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/register_referral_code_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/register_label_referral_hint"
+
+                    android:inputType="text"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                    android:textSize="16sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#D5D4D2"
+                    app:met_clearButton="true"
+                    app:met_errorColor="@color/app_cancel_btn_color"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="#000"
+                    app:met_hideUnderline="false"
+                    app:met_iconLeft="@drawable/referral_code_icon"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#D5D4D2"
+                    app:met_textColor="@color/white_color"
+                    app:met_textColorHint="#D5D4D2"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#D3D3D3" />
+
+
+                <ImageView
+                    android:id="@+id/register_referral_code_help_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/help_icon" />
+
+            </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:button="@drawable/custom_checkbox"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:id="@+id/agree_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Agree"
+                android:layout_toRightOf="@+id/checkbox"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/white_color"
+                android:textSize="13dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/agree_text"
+                android:text=" "
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/terms_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_conditions"
+                android:layout_toRightOf="@+id/empty_text"
+                android:textColor="#483D8B"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/empty_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/terms_text"
+                android:text=" &amp; "
+                android:textColor="@color/white_color"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/privacy_policy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy_text"
+                android:textColor="#483D8B"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_below="@+id/empty_text2"
+                android:layout_alignStart="@+id/agree_text"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+
+
+
+            <Button
+                android:id="@+id/register_submit_button"
+                android:layout_width="fill_parent"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="#D5D4D2"
+                android:text="@string/register_label_register"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

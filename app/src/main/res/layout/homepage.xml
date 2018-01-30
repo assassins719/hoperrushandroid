@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE">
+
+        <include
+            android:id="@+id/homepage_headerBar_container_header"
+            layout="@layout/toolbar_layout_without_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
+            android:id="@+id/home_swipeToRefresh_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/homepage_headerBar_container_header">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EEEEEE">
+
+                <View
+                    android:id="@+id/toolbar_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@xml/toolbar_shadow" />
+
+                <RelativeLayout
+                    android:id="@+id/homepage_noInternet_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/toolbar_shadow"
+                    android:background="#EEEEEE"
+                    android:visibility="gone">
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:fillViewport="true"
+                        android:scrollbars="none">
+
+                        <include
+                            android:id="@+id/homepage_toolbar_container_header"
+                            layout="@layout/no_internet_connection"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" />
+                    </ScrollView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/homepage_main_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/toolbar_shadow"
+                    android:background="#EEEEEE"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/homepage_cardView_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="6dp"
+                        app:cardBackgroundColor="#ffffff"
+                        card_view:cardElevation="5dp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:background="#ffffff">
+
+                            <com.hoperrush.core.widgets.CustomTextView
+                                android:id="@+id/homepage_category_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/homepage_label_category"
+                                android:textColor="#4e4e4e"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_toRightOf="@+id/homepage_category_label"
+                                android:background="#00000000"
+                                android:gravity="right">
+
+                                <LinearLayout
+                                    android:id="@+id/homepage_city_select_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="fill_parent"
+                                    android:background="#00000000"
+                                    android:gravity="center_vertical|right"
+                                    android:orientation="horizontal">
+
+                                    <com.hoperrush.core.widgets.CustomTextView
+                                        android:id="@+id/homepage_in_label"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center_vertical"
+                                        android:text="@string/homepage_label_in"
+                                        android:textColor="#777777"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <com.hoperrush.core.widgets.CustomTextView
+                                        android:id="@+id/homepage_selected_city_textView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:text=""
+                                        android:textColor="#009788"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/homepage_selected_city_down_arrow"
+                                        android:layout_width="16dp"
+                                        android:layout_height="18dp"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/down_arrow_icon" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <ListView
+                        android:id="@+id/homepage_listView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:divider="#EEEEEE"
+                        android:dividerHeight="7dp"
+                        android:padding="5dp"
+                        android:layout_below="@+id/homepage_cardView_layout"
+                        android:scrollbars="none"
+                        android:layoutAnimation="@anim/layout_item_slide_in"
+                        android:visibility="visible" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/homepage_chat_fabButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/chat_icon_float"
+                        app:fab_colorNormal="#009788"
+                        app:fab_colorPressed="#4BB5AB"
+                        app:fab_colorRipple="#83C4C3"
+                        app:fab_elevationCompat="4dp"
+                        app:fab_shadowColor="#66000000"
+                        app:fab_shadowRadius="4dp"
+                        app:fab_shadowXOffset="1dp"
+                        app:fab_shadowYOffset="3dp"
+                        app:fab_showShadow="true"
+                        app:fab_size="normal"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

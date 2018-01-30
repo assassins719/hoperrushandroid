@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/profile_reviwes_swipe_refresh_layout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="#d9d9d9">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_profilereviwes_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/profilereviwes_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"></ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_profilereviwes_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <include
+                android:id="@+id/profilereviwes_noreviwes_include"
+                layout="@layout/no_reviwes_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_profilereviwes_noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <include
+                android:id="@+id/profilereviwes_nointernet_include"
+                layout="@layout/no_internet_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <include
+        android:id="@+id/appointment_confirmation_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/appointment_confirmation_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/appointment_confirmation_page_done_button"
+        android:layout_below="@+id/appointment_confirmation_headerBar_container_header"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000">
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/appointment_confirmation_title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:text="gdfvdxfvds"
+                android:layout_marginLeft="10dp"
+                android:textColor="#515151"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:id="@+id/appointment_confirmation_detail_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appointment_confirmation_title_textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#F4F8F9">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_confirmation_booking_id_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/appointment_confirmation_label_booking_id"
+                    android:textColor="#858585"
+                    android:textSize="13sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_confirmation_booking_id_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appointment_confirmation_booking_id_label"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text=""
+                    android:textColor="#5b5959"
+                    android:textSize="15sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_confirmation_booking_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/appointment_confirmation_label_booking_date"
+                    android:textColor="#858585"
+                    android:textSize="13sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_confirmation_booking_date_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/appointment_confirmation_booking_date_label"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text=""
+                    android:textColor="#5b5959"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/appointment_confirmation_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/appointment_confirmation_booking_id_textView"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#cdcdcd" />
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_confirmation_booking_service_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appointment_confirmation_view1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/appointment_confirmation_label_service_type"
+                    android:textColor="#858585"
+                    android:textSize="13sp" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_confirmation_booking_service_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appointment_confirmation_booking_service_label"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text=""
+                    android:textColor="#5b5959"
+                    android:textSize="15sp" />
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/appointment_confirmation_booking_service_textView"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+            <View
+                android:id="@+id/appointment_confirmation_view2"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#cdcdcd" />
+
+            <RelativeLayout
+                android:id="@+id/appointment_confirmation_booking_description_textView_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/appointment_confirmation_detail_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#F4F8F9">
+
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_confirmation_booking_description_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="fdgvsdcfds"
+                    android:textColor="#5b5959"
+                    android:textSize="13sp" />
+
+
+            </RelativeLayout>
+
+
+            <!--
+
+
+
+
+            <com.maidac.mylibrary.widgets.CustomTextView
+                android:id="@+id/appointment_confirmation_booking_description_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appointment_confirmation_detail_layout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="fdd"
+                android:textColor="#5b5959"
+                android:textSize="16sp"/>
+            -->
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/appointment_confirmation_slash_textView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/appointment_confirmation_label_slash"
+                android:textColor="#cdcdcd"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/appointment_confirmation_page_done_button"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_color_button"
+        android:text="@string/appointment_confirmation_label_done"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</RelativeLayout>

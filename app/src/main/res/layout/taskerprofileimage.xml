@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_profile_main">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:background="#155b75"
+        android:id="@+id/header">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reviwes_profileimg"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:text="UserName"
+            android:textSize="20sp"
+            android:id="@+id/username"/>
+        <com.hoperrush.core.widgets.CircularImageView
+            android:id="@+id/reviwes_profileimg"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+           android:layout_centerHorizontal="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/profile" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ratingstar"
+            android:layout_toRightOf="@+id/reviwes_profileimg"
+            android:layout_above="@+id/username"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ratingimage"
+            android:layout_marginRight="60dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/reviwes_profileimg"
+            android:layout_above="@+id/username"
+            android:layout_marginTop="13dp"
+            android:text="5.0"
+            android:textSize="14sp"
+            android:id="@+id/rating"
+            android:textColor="#FFF"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@+id/reviwes_profileimg"
+            android:background="#FFF"
+            android:layout_marginTop="90dp"
+            android:id="@+id/view1"
+           ></View>
+
+        <View
+        android:layout_width="2px"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/view1"
+        android:background="#FFF"
+        android:id="@+id/view2"
+        android:layout_marginLeft="120dp"
+          ></View>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/view1"
+            android:background="#FFF"
+            android:id="@+id/view3"
+            android:layout_marginRight="120dp"
+            android:layout_alignParentRight="true"></View>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:text="Radius"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="6dp"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:id="@+id/radius_text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radius_text"
+            android:text="50 Km"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:id="@+id/radius"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:text="Hourly Cost"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:id="@+id/hour_cost"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hour_cost"
+            android:text="50 $"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:id="@+id/h_cost"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:text="Mini Cost"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:id="@+id/maximum_cost_text"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hour_cost"
+            android:text="50 $"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:id="@+id/maximum_cost"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="ksvapplication91@gmail.com"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/email"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="0989459067"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/mobile"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/editprofile" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/header">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address_layout"
+
+       >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="30dp"
+           android:id="@+id/address_text"
+           android:layout_marginTop="6dp"
+           android:background="#155b75"
+           >
+           <ImageView
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_alignParentLeft="true"
+               android:layout_marginLeft="10dp"
+               android:layout_centerVertical="true"
+               android:src="@drawable/addresswhite"
+               android:id="@+id/address_icon1"/>
+           <ImageView
+               android:layout_width="15dp"
+               android:layout_height="15dp"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="10dp"
+               android:src="@drawable/whitearrow_down"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:text="Address"
+               android:textSize="16sp"
+               android:textStyle="bold"
+               android:textColor="#FFF"
+               android:layout_toRightOf="@+id/address_icon1"
+               android:layout_marginLeft="10dp"/>
+       </RelativeLayout>
+
+<ImageView
+    android:layout_width="10dp"
+    android:layout_height="10dp"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="60dp"
+    android:src="@drawable/dot_icon"
+    android:id="@+id/address_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/address_icon"
+            android:layout_below="@+id/address_text"
+            android:textColor="#8e8e8e"
+            android:textSize="14sp"
+            android:text="No.7, (Old No.3), Cenotaph Road, 1st Street, Teynampet
+044 2433 4434
+Open until 5:00 PM"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/address"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/address"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#9b9b9b"
+            android:id="@+id/addressview"
+            android:visibility="gone"></View>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/category_layout"
+        android:layout_below="@+id/address_layout"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/category_text"
+            android:layout_marginTop="6dp"
+            android:background="#155b75"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/category_icon"
+                android:id="@+id/category_icon1"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/whitearrow_down"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Category"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:layout_toRightOf="@+id/category_icon1"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/dot_icon"
+            android:id="@+id/category_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/category_icon"
+            android:layout_below="@+id/category_text"
+            android:textColor="#8e8e8e"
+            android:textSize="14sp"
+            android:text="Kitchen Cleaning"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/category"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/category"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#9b9b9b"
+            android:id="@+id/categoryview"
+            android:visibility="gone"></View>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_layout"
+        android:layout_below="@+id/category_layout"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/location_text"
+            android:layout_marginTop="6dp"
+            android:background="#155b75"
+            >
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/workinglocation"
+                android:id="@+id/location_icon1"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/whitearrow_down"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Working Location"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:layout_toRightOf="@+id/location_icon1"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/dot_icon"
+            android:id="@+id/location_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/location_icon"
+            android:layout_below="@+id/location_text"
+            android:textColor="#8e8e8e"
+            android:textSize="14sp"
+            android:text="68, College Road, E.V.K. Sampath Maaligai, 7th Floor, Numgambakkam
+044 2825 1323
+Open until 6:00 PM"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/working_location"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/working_location"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#9b9b9b"
+            android:id="@+id/locationview"
+            android:visibility="gone"></View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/experience_layout"
+        android:layout_below="@+id/location_layout"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/experience_text"
+            android:layout_marginTop="6dp"
+            android:background="#155b75"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/workexp"
+                android:id="@+id/experience_icon1"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/whitearrow_down"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Working Experience"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:layout_toRightOf="@+id/experience_icon1"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/dot_icon"
+            android:id="@+id/experience_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/experience_icon"
+            android:layout_below="@+id/experience_text"
+            android:textColor="#8e8e8e"
+            android:textSize="14sp"
+            android:text="Experience 7 years "
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/experience_location"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/experience_location"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#9b9b9b"
+            android:id="@+id/experienceview"
+            android:visibility="gone"></View>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/availability_layout"
+        android:layout_below="@+id/experience_layout"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/availability_text"
+            android:layout_marginTop="6dp"
+            android:background="#155b75"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tickicon"
+                android:id="@+id/availability_icon1"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/whitearrow_down"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Availability"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:layout_toRightOf="@+id/availability_icon1"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/avail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/availability_text">
+
+            <TextView
+                android:id="@+id/availability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:text="Availability"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/mor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/availability"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/availability"
+                android:text="Morning"
+                android:textColor="#9b9b9b"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mor"
+                android:text="(8Am-12Pm)"
+                android:layout_marginLeft="115dp"
+                android:textSize="9sp"
+                android:id="@+id/mor_time"
+                android:textColor="#8e8e8e"/>
+
+            <TextView
+                android:id="@+id/after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/availability"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/mor"
+                android:text="Afternoon"
+                android:textColor="#9b9b9b"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/after"
+                android:text="(12Pm-4Pm)"
+                android:layout_marginLeft="40dp"
+                android:textSize="9sp"
+                android:layout_toRightOf="@+id/mor_time"
+                android:id="@+id/after_time"
+                android:textColor="#8e8e8e"/>
+
+            <TextView
+                android:id="@+id/eve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/availability"
+                android:layout_marginTop="10dp"
+                android:text="Evening"
+                android:textStyle="bold"
+                android:textColor="#9b9b9b"
+                android:textSize="18sp"
+                android:layout_marginRight="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eve"
+                android:text="(4Pm-8Pm)"
+                android:layout_alignParentRight="true"
+                android:textSize="9sp"
+                android:layout_marginRight="9dp"
+                android:id="@+id/eve_time"
+                android:textColor="#8e8e8e"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/avail">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"></ListView>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_profile_noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <include
+                android:id="@+id/profilereviwes_nointernet_include"
+                layout="@layout/no_internet_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/view_profile_bottom_chatAndCall_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E8A68C">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/view_profile_chat_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#017500"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/view_profile_chat_icon" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/myJobs_label_chat"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/view_profile_call_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#026CB6"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/tickicon" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="BOOK"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+

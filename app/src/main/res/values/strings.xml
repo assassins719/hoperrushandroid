@@ -1,0 +1,554 @@
+<resources>
+    <string name="app_name">Hoper Rush</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">CANCEL</string>
+    <string name="action_signingIn">Signing In</string>
+    <string name="action_signingUp">Signing Up</string>
+    <string name="action_error">Sorry</string>
+    <string name="action_sorry">Sorry</string>
+    <string name="action_deleting">Deleting</string>
+    <string name="action_success">Success</string>
+    <string name="action_updating">Updating</string>
+    <string name="action_processing">Processing</string>
+    <string name="action_pleaseWait">Please Wait</string>
+    <string name="action_loading">Loading</string>
+    <string name="action_verifying">Verifying</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="action_no_internet_title">No Internet!</string>
+    <string name="action_select_task_id">Select Tasker</string>
+    <string name="action_select_main_category">Select Category</string>
+    <string name="action_select_main_category_message">Please select category</string>
+    <string name="action_select_Sub_category">Select SubCategory</string>
+    <string name="action_select_sub_category_message">Please select subcategory</string>
+    <string name="action_select_tasker">Sorry</string>
+    <string name="action_select_tasker_message">You have already selected tasker</string>
+    <string name="action_select_same_tasker_message">You have already selected this tasker</string>
+    <string name="action_no_internet_swipe_down">Swipe Down To Refresh</string>
+    <string name="action_no_internet_message">You are offline please check your internet connection</string>
+    <string name="action_message_booking_alert">Please select a tasker</string>
+    <string name="action_cancel_small">Cancel</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_typing">typing..</string>
+    <string name="action_session_expired_title">Session Expired</string>
+    <string name="action_session_expired_message">Please re-login to renew your session</string>
+    <string name="alert_gpsEnable">Enable GPS to locate your location</string>
+    <string name="takePhoto_title">How do you want to take your photo? </string>
+    <string name="takePhoto_camera">Take photo from camera</string>
+    <string name="takePhoto_gallery">Choose an existing photo from gallery</string>
+
+    <string name="ascending">Ascending</string>
+
+    <string name="ascendingname">Name</string>
+
+    <string name="dscending">Descending</string>
+    <string name="warning">This chat room is for Hoper Rush business discussion only. Any use other than the primary purpose is prohibited.Tap for more info</string>
+    <string name="warning1">This chat room is for Hoper Rush business discussion only. Any use other than the primary purpose is prohibited. Especially sending adverts, sexual content or abuse of the other party right. Admin goes through all chat content and attachments at all time. Defaulter are punishable under Indian Law.</string>
+
+    <string name="jobfare_jobid_label">Job Id :</string>
+    <string name="jobfare_header_label">JOB FARE</string>
+    <string name="payment_no_jobfare">You dnt have jobfare</string>
+    <string name="no_inetnet_whoops_label">Whoops! Check Connection</string>
+    <string name="no_inetnet_label">you are offline.please check your mobile data or Wifi connection</string>
+    <string name="title_activity_payment_new">PaymentNew</string>
+    <string name="title_activity_card_list__details">Card_list_Details</string>
+
+
+    <!-- Estimate Price Activity -->
+    <string name="estimate_price_label_search">Enter Place to Search</string>
+    <string name="estimate_price_label_place_notAvailable">No Search Found</string>
+    <string name="estimate_price_label_not_found">No Rate Available</string>
+
+    <string name="signIn_signUp_label_welcome">WELCOME</string>
+    <string name="signIn_signUp_label_facebook">LOG IN WITH FACEBOOK</string>
+    <string name="signIn_signUp_label_signup">REGISTER</string>
+    <string name="signIn_signUp_label_signin">SIGN IN</string>
+    <string name="Agree">Please agree the </string>
+    <string name="terms_conditions"> Terms&amp;Conditions</string>
+    <string name="privacy_policy_text">Privacy Policy</string>
+    <string name="about_text">AboutUs</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="payments_disabled_text">All Payments were disabled by the Admin.</string>
+
+
+    <!--Xmpp Notification Message-->
+    <string name="xmpp_notification_label_accept">Accepted Job</string>
+    <string name="xmpp_notification_label_reAssign">Sorry</string>
+    <string name="xmpp_notification_label_startOff">Start Off</string>
+    <string name="xmpp_notification_label_arrived">Arrived</string>
+    <string name="xmpp_notification_label_startoff">Start Off</string>
+    <string name="xmpp_notification_label_started">Job Started</string>
+    <string name="xmpp_notification_label_completed">Completed</string>
+    <string name="xmpp_notification_label_declined">Declined</string>
+    <string name="xmpp_notification_payment_request">Payment Request</string>
+    <string name="job_cancel">Unfortunatly this provider will not continue your job. we will arrange another provider shortly.</string>
+    <string name="xmpp_notification_label_payment_completed">Payment Completed</string>
+    <string name="admin_notification">Admin Notification</string>
+
+
+    <!-- Login Page -->
+    <string name="login_label_Email">Phone or Email</string>
+    <string name="login_label_password">Password</string>
+    <string name="login_label_login">SIGN IN</string>
+    <string name="login_label_forgot_password">Forgot password?</string>
+    <string name="login_label_login1">SIGN IN</string>
+    <string name="login_label_alert_invalid_email">Email address is invalid</string>
+    <string name="login_label_alert_password">Password can\'t be empty</string>
+    <string name="login_label_alert_signIn_failed">Sign In Failed</string>
+
+    <string name="server_lable_header">Sorry!</string>
+    <string name="server_ok_lable_header">Ok</string>
+
+    <string name="arrived_alert_content1">Unable to contact tasker.please try again after sometime</string>
+
+    <string name="aboutus_lable_header_textview">ABOUT US</string>
+    <string name="terms_conditions_text">Terms &amp; Conditions</string>
+    <string name="aboutus_lable_poweredby_textview">POWERED BY :</string>
+    <string name="aboutus_lable_company_textview">Hoper Rush</string>
+    <string name="aboutus_lable_version_code_textview">VERSION 1.0</string>
+    <string name="aboutus_lable_moreinfo_textview">More Info</string>
+
+    <string name="aboutus_lable_aboutus_description_textview">Hoper Rush - Refer Website..</string>
+
+    <string name="action_pleasewait">Please Wait...</string>
+
+    <!-- Register Page -->
+    <string name="register_label">REGISTER</string>
+    <string name="register_label1">Not with one of us?</string>
+    <string name="register_label_email_hint">Email Address</string>
+    <string name="register_firstname">First Name</string>
+    <string name="register_lastname">Last Name</string>
+    <string name="register_label_pwd_hint">Password</string>
+    <string name="register_label_confirm_pwd_hint">Confirm Password</string>
+    <string name="register_label_username_hint">UserName</string>
+    <string name="register_label_phone_hint">Phone Number</string>
+    <string name="register_label_code_hint">Code</string>
+    <string name="register_label_referral_hint">Referral Code</string>
+    <string name="register_label_register">REGISTER</string>
+    <string name="register_label_alert_username">UserName can\'t be empty</string>
+    <string name="register_label_alert_username_lowercase">UserName allowed only lower case letters</string>
+    <string name="register_label_alert_password">Password must be at least 6 characters, and must include at least one lower case letter, and one numeric digit.</string>
+    <string name="password_alert">Enter password</string>
+    <string name="register_label_alert_email">Email address is invalid</string>
+    <string name="register_label_alert_firstname">FirstName can\'t be empty</string>
+    <string name="register_label_alert_lastname">LastName can\'t be empty</string>
+    <string name="confirm_password_alert">Password not match</string>
+    <string name="alert_email">Enter email address</string>
+    <string name="register_label_alert_phoneNo">Must be a valid phone number</string>
+    <string name="alert_phonenumber">Enter phone number</string>
+    <string name="register_label_alert_country_code">Enter country code</string>
+    <string name="register_label_referral_schema">Referral Schema!</string>
+    <string name="register_label_referral_ok">OK</string>
+    <string name="register_label_referral_schema_content1">Have you received a referral code from a friend or contact? Enter it in this form, to get free credits to your Hoper Rush Wallet.</string>
+    <string name="register_label_referral_schema_content2">Note:The referral code is a unique code from each user and can only be used one time as a new Hoper Rush Customer.</string>
+    <string name="login_label_alert_register_failed">Register Failed</string>
+    <string name="terms_text">Please agree the Terms&amp;Conditions</string>
+
+
+    <!-- OTP Page -->
+    <string name="otp_label_verification">OTP Verification</string>
+    <string name="otp_label_enter_otp">Enter OTP</string>
+    <string name="otp_label_entered_otp">Entered OTP</string>
+    <string name="otp_label_send">SEND</string>
+    <string name="action_otp">Verifying</string>
+    <string name="otp_label_alert_otp">OTP can\'t be empty</string>
+    <string name="otp_label_alert_invalid">Invalid OTP</string>
+    <string name="otp_label_alert_verification_failed">OTP Verification Failed</string>
+
+    <!-- Forgot Password Page -->
+    <string name="forgot_password_email_label_title">FORGOT PASSWORD</string>
+    <string name="forgot_password_email_label_enter_email">Email Address or Phone Number</string>
+    <string name="forgot_password_email_label_send_email">RESET PASSWORD</string>
+    <string name="forgot_password_email_label_enter_valid_email">Email address is invalid</string>
+    <string name="forgot_password_email_label_success">Verification code has been sent to your registered mobile number</string>
+
+    <!-- Reset Password Page -->
+    <string name="reset_password_label_title">RESET PASSWORD</string>
+    <string name="reset_password_label_email">Phone or Email</string>
+    <string name="reset_password_label_enter_new_password">New Password</string>
+    <string name="reset_password_label_show_password_text">Show Password</string>
+    <string name="reset_password_email_label_enter_valid_email">Enter valid email</string>
+    <string name="reset_password_email_label_enter_valid_password">Password can\'t be empty</string>
+
+
+    <!-- City Selection Page -->
+    <string name="city_selection_label_title">SELECT YOUR CITY</string>
+
+    <!-- Navigation Drawer Layout -->
+    <string name="navigation_label_home">HOME</string>
+    <string name="navigation_label_myOrders">MY ORDERS</string>
+    <string name="navigation_label_money">MY MONEY</string>
+    <string name="navigation_label_chat">CHAT</string>
+    <string name="navigation_label_invite">INVITE FRIENDS</string>
+    <string name="navigation_label_emergency">EMERGENCY CONTACT</string>
+    <string name="navigation_label_report_issue">REPORT ISSUES</string>
+    <string name="navigation_label_providers">PROVIDERS</string>
+    <string name="navigation_label_aboutUs">ABOUT US</string>
+    <string name="navigation_label_logout">LOG OUT</string>
+
+    <!-- Home Page Layout -->
+    <string name="homepage_label_title">Hoper Rush</string>
+    <string name="homepage_label_category">CATEGORY</string>
+    <string name="homepage_label_in">in</string>
+    <string name="homepage_label_select_city">Please select your city</string>
+    <string name="homepage_label_select_city_cancel">Cancel</string>
+    <string name="alert_nointernet">No Internet Connection</string>
+    <string name="track_your_ride_alert_content1">Unable to contact provider.Please try again after sometime</string>
+
+
+    <!--Emergency Contact-->
+    <string name="emergencyContact_label_header_textView">EMERGENCY CONTACT</string>
+    <string name="emergencyContact_label_enterName_textView">Enter Name</string>
+    <string name="emergencyContact_label_enterCode_textView">+91</string>
+    <string name="emergencyContact_label_enter_mobileNo_textView">Enter 10 digit Mobile Number</string>
+    <string name="emergencyContact_label_enterEmail_id_textView">Enter Email Address</string>
+    <string name="emergencyContact_label_list_textView">Enter Your Emergency Contact\'s Name,Mobile number and Email ID here.</string>
+    <string name="emergencyContact_label_note_textView">Note:Your contact can be alerted only after verification.</string>
+    <string name="emergencyContact_label_share_always_textView">Always share my ride with my contact</string>
+    <string name="emergencyContact_label_here_move_contact_textView">Remove contact</string>
+    <string name="emergencyContact_label_save_contact_textView">SAVE</string>
+    <string name="emergencyContact_label_name_validate_textView">Name can\'t be empty</string>
+    <string name="emergencyContact_label_mobile_novalidate_textView">Enter valid phone number</string>
+    <string name="emergencyContact_label_email_validate_textView">Enter valid email</string>
+    <string name="emergencyContact_label_code_validate_textView">Enter country code</string>
+    <string name="emergencyContact_label_saved_emergencyContacts">Emergency contact has been updated successfully</string>
+    <string name="emergencyContact_label_saving_textView">Saving</string>
+    <string name="emergencyContact_label_delete_success_textView">Emergency contact has been deleted successfully</string>
+
+    <!-- Invite And Earn -->
+    <string name="invite_earn_label_shareAndEarn">SHARE AND EARN</string>
+    <string name="invite_earn_label_friends_earn">Friend joins,friend earns</string>
+    <string name="invite_earn_label_friends_ride">Friend orders</string>
+    <string name="invite_earn_label_friend_ride">you earn</string>
+    <string name="invite_earn_label_shareReferralCode">Share your referral code</string>
+    <string name="invite_earn_label_start_invite">Start inviting friends</string>
+    <string name="invite_earn_label_invite_sms">SMS</string>
+    <string name="invite_earn_label_invite_email">Email</string>
+    <string name="invite_earn_label_facebook">Facebook</string>
+    <string name="invite_earn_label_whatsApp">WhatsApp</string>
+    <string name="invite_earn_label_messenger">Messenger</string>
+    <string name="invite_earn_label_twitter">Twitter</string>
+    <string name="invite_earn_label_letWorldKnow">Let the world know</string>
+    <string name="invite_earn_label_whatsApp_not_installed">We could not find WhatsApp installed on your device.</string>
+    <string name="invite_earn_label_messenger_not_installed">We could not find Messenger installed on your device.</string>
+    <string name="invite_earn_label_email_not_installed">There is no email client installed on your device.</string>
+    <string name="invite_earn_label_twitter_not_installed">We could not find Twitter installed on your device.</string>
+    <string name="invite_earn_label_facebook_not_installed">We could not find Facebook installed on your device.</string>
+    <string name="invite_earn_label_share_message1">Refer and Earn,when your friend signup with your referral code,you earn</string>
+    <string name="invite_earn_label_share_message2">in your wallet and your friend earn</string>
+    <string name="invite_earn_label_share_message3">Signup using the code</string>
+    <string name="invite_earn_label_twitter_share_message">to ride free.Enjoy! http://hoperrush.com</string>
+    <string name="invite_earn_label_others">Others</string>
+    <!--<string name="facebook_app_id">1294268777311773</string>-->
+    <string name="facebook_app_id">229602460782482</string>
+
+
+    <!--Maidac Money-->
+    <string name="plumbal_label_header_textView">Wallet Money</string>
+    <string name="plumbalMoney_label_textView">Cashless,hassle-free tasks &amp; more... </string>
+    <string name="plumbalMoney_label_your_current_balance_textView">Your current balance</string>
+    <string name="plumbalMoney_label_rechargeMoney_textView">Recharge Hoper Rush Money</string>
+    <string name="plumbalMoney_label_rechargeMoney_editText">Enter amount between $10 - $100</string>
+    <string name="plumbalMoney_label_rechargeMoney_editText_hint">Enter amount between</string>
+    <string name="plumbalMoney_label_rechargeMoney_alert">Recharge amount should be between</string>
+    <string name="plumbalMoney_label_add_plumbalMoney">ADD WALLET MONEY</string>
+    <string name="walletMoney_label_add_plumbalMoney">Stripe</string>
+    <string name="walletMoney_label_add_psgiMoney">PSGiPayment</string>
+    <string name="plumbalMoney_enter_amount">please enter amount to add your wallet</string>
+    <string name="action_loading_plumbal_money_empty_field">Enter the amount</string>
+    <string name="action_loading_plumbalMoney_transaction_wallet_success">Transaction successful</string>
+
+    <!--Maidac Money WebView-->
+    <string name="plumbal_webView_label_header_textView">PAYMENT TRANSACTION</string>
+    <string name="plumbal_webView_label_transaction_cancel">Transaction has been cancelled</string>
+    <string name="plumbal_webView_label_transaction_failed">Transaction has been failed</string>
+    <string name="plumbal_webView_label_transaction_success">Payment was successful</string>
+    <string name="plumbal_webView_label_cancel_transaction">Cancel Transaction</string>
+    <string name="plumbal_webView_label_cancel_transaction_proceed">Pressing back would cancel your current transaction.Proceed anyway ?</string>
+
+    <!--Maidac Money Transaction-->
+    <string name="plumbal_transaction_label_header_textView">RECENT TRANSACTION</string>
+    <string name="plumbal_money_label_transaction_all">ALL</string>
+    <string name="plumbal_money_label_transaction_credit">CREDIT</string>
+    <string name="plumbal_money_label_transaction_debit">DEBIT</string>
+    <string name="plumbal_money_label_no_transaction_yet">No Transaction Yet!</string>
+    <string name="plumbal_money_label_transaction_list_credit">CR</string>
+    <string name="plumbal_money_label_transaction_list_debit">DR</string>
+    <string name="plumbal_money_label_transaction_list_balance">Balance :</string>
+
+
+    <!--Appointment Page-->
+    <string name="appointment_label_header_textView">SCHEDULE AN APPOINTMENT</string>
+    <string name="appointment_label_select_date">SELECT DATE</string>
+    <string name="appointment_label_select_time">SELECT TIME</string>
+    <string name="appointment_label_book_now">SEARCH NOW</string>
+    <string name="appointment_label_enter_coupon">Enter Coupon Code</string>
+    <string name="appointment_label_coupon_apply">Apply</string>
+    <string name="appointment_label_add_address">Add Address</string>
+    <string name="appointment_label_your_address">Your Address :</string>
+    <string name="appointment_label_your_instruction">Enter your special instruction</string>
+    <string name="appointment_label_landmark">LandMark :</string>
+    <string name="appointment_label_select_date_alert">Please select the date</string>
+    <string name="appointment_label_select_time_alert">Please select the time</string>
+    <string name="appointment_label_select_address_alert">Please add address</string>
+    <string name="appointment_label_select_instruction_alert">Please enter your instruction</string>
+    <string name="appointment_label_select_tasker_view_alert">Please select tasker view type</string>
+    <string name="appointment_label_no_time_slot_alert">The working hours for the day have been completed,choose another day to start a task</string>
+    <string name="appointment_label_invalid_coupon_code_alert">Invalid coupon code</string>
+    <string name="appointment_action_apply_coupon">Applying coupon</string>
+    <string name="appointment_action_delete_address">Deleting</string>
+    <string name="appointment_label_remove_address">Address deleted successfully</string>
+
+    <!--Appointment Page Timer Dialog-->
+    <string name="appointment_label_dialog_select_time">SELECT TIME</string>
+
+    <!--Appointment Page More Address Dialog-->
+    <string name="appointment_more_address_dialog_select_address">SELECT ADDRESS</string>
+
+    <!--Add Address Page-->
+    <string name="add_address_label_header_textView">ADD ADDRESS</string>
+    <string name="add_address_label_done">DONE</string>
+    <string name="add_address_label_edit_contact">EDIT CONTACT DETAILS</string>
+    <string name="add_address_label_enter_address">ENTER ADDRESS</string>
+    <string name="add_address_label_your_locality">Your Locality</string>
+    <string name="add_address_label_houseNo">House No/Street/Area</string>
+    <string name="add_address_label_landmark">Landmark</string>
+    <string name="add_address_label_state">State</string>
+    <string name="add_address_label_city">City</string>
+    <string name="add_address_label_country">Country</string>
+    <string name="add_address_label_zipCode">ZipCode</string>
+    <string name="add_address_label_enter_locality_alert">Enter your locality</string>
+    <string name="add_address_label_enter_houseNo_alert">Enter your house no</string>
+    <string name="add_address_label_enter_landMark_alert">Enter your landmark</string>
+    <string name="add_address_label_enter_city_alert">Enter your city</string>
+    <string name="add_address_label_enter_zip_alert">Enter your zipcode</string>
+    <string name="add_address_label_add_address_dialog">Adding Address</string>
+    <string name="screen_transaction_tab_menu_TXT_title">Transaction</string>
+
+    <!--Appointment Confirmation Page-->
+    <string name="appointment_confirmation_label_title">Congratulation!</string>
+    <string name="appointment_confirmation_label_done">DONE</string>
+    <string name="appointment_confirmation_label_booking_id">BOOKING ID</string>
+    <string name="appointment_confirmation_label_booking_date">ORDER DATE</string>
+    <string name="appointment_confirmation_label_service_type">SERVICE TYPE</string>
+    <string name="appointment_confirmation_label_slash">- - - - - - - - - - - - - - - - - - - - - - </string>
+
+
+    <!--My Jobs Page-->
+    <string name="myJobs_label_title">MY ORDERS</string>
+    <string name="myJobs_label_all">ALL</string>
+    <string name="myJobs_label_closed">OPEN</string>
+    <string name="myJobs_label_completed">COMPLETED</string>
+    <string name="myJobs_label_cancelled">CANCELLED</string>
+    <string name="myJobs_label_myJobs">MY JOBS</string>
+    <string name="myJobs_label_myJobs_empty">No Orders Made Yet!</string>
+
+    <string name="myJobs_label_cancelledmyJobs_empty">No Cancelled Orders Made Yet!</string>
+
+    <string name="myJobs_label_completedmyJobs_empty">No Completed Orders Made Yet!</string>
+
+
+    <string name="myJobs_label_orderId">JOB ID :</string>
+    <string name="myJobs_label_chat">CHAT</string>
+    <string name="myJobs_label_call">CALL</string>
+    <string name="myJobs_label_cancel">CANCEL</string>
+    <string name="myJobs_label_no_provider_assigned">No Provider Assigned</string>
+    <string name="myJobs_label_call_support">Are you sure you want to Call the Support team</string>
+    <string name="myJobs_cancel_job_alert">Are you sure you want to cancel this job?</string>
+    <string name="myJobs_cancel_job_alert_yes">YES</string>
+    <string name="myJobs_cancel_job_alert_no">NO</string>
+    <string name="myJobs_cancel_job_alert_title">CANCEL JOB</string>
+
+    <string name="myJobs_label_provider_call">Call</string>
+    <string name="myJobs_label_calls">Are you sure you want to Call this number </string>
+    <string name="navigation_label_transactions">Transactions</string>
+    <string name="navigation_label_review">Reviews</string>
+    <string name="navigation_label_notification">Notifications</string>
+
+    <!--Navigation Item-->
+
+    <string name="navigation_label_transactions1">TRANSACTION</string>
+    <string name="navigation_label_review1">REVIEWS</string>
+    <string name="navigation_label_notification1">NOTIFICATION</string>
+
+    <!--My Jobs Detail Page-->
+    <string name="myJobs_detail_label_requestSubmitted">Request \n Submitted</string>
+    <string name="myJobs_detail_label_professionalAssigned">Professional \n Assigned</string>
+    <string name="myJobs_detail_label_serviceDelivery">Service \n Delivery</string>
+    <string name="myJobs_detail_label_detail">DETAILS</string>
+    <string name="myJobs_detail_label_response">RESPONSES</string>
+    <string name="myJobs_detail_label_date_time">Date and Time</string>
+    <string name="cancel_reason_text">Cancellation Reason</string>
+    <string name="myJobs_detail_label_location">Location</string>
+    <string name="myJobs_detail_label_chat">CHAT</string>
+    <string name="myJobs_detail_label_viewProfile">VIEW PROFILE</string>
+    <string name="myJobs_detail_label_bio">BIO :</string>
+    <string name="myJobs_detail_label_cancel_job">CANCEL JOB</string>
+    <string name="myJobs_detail_label_make_payment">MAKE PAYMENT</string>
+    <string name="myJobs_detail_label_provide_rating">PROVIDE RATING</string>
+    <string name="myJobs_detail_label_no_provider_assigned">No Response From The Hoper Rush</string>
+    <string name="myJobs_detail_label_unable_to_create_map">Unable to create map.Install Google Play service To View Location !!!</string>
+
+
+    <!--Cancel Job Page -->
+    <string name="cancel_job_header_textView">CANCEL JOB</string>
+    <string name="cancel_job_why_label">Why are you cancelling ?</string>
+    <string name="cancel_job_action_cancel">Cancelling</string>
+    <string name="alert_label_title">Sorry!</string>
+    <string name="alert_servererror">Server Error</string>
+    <string name="loading_in">Loading..</string>
+    <string name="label_pushnotification_cashreceived">Success</string>
+
+    <!--Profile Page -->
+    <string name="profile_page_header_textView">MY PROFILE</string>
+    <string name="profile_page_signOut_textView">SIGN OUT</string>
+    <string name="action_logging_out">Signing Out</string>
+    <string name="profile_label_signInDetails">SIGN IN DETAILS</string>
+    <string name="profile_label_emailId">Email Id</string>
+    <string name="profile_label_emailId_user">ani@gmail.com</string>
+    <string name="profile_label_signIn_star">*************</string>
+    <string name="profile_label_signIn_changePassword">Change Password</string>
+    <string name="profile_label_signIn_hintName">Name</string>
+    <string name="profile_label_signIn_hint_code">Code</string>
+    <string name="profile_label_signIn_hint_mobileNo">Mobile No</string>
+    <string name="profile_label_signIn_myDetails">MY DETAILS</string>
+    <string name="profile_label_save">Save</string>
+    <string name="profile_label_username_success">Name updated successfully</string>
+    <string name="profile_label_userImage_success">User Image updated successfully</string>
+    <string name="profile_label_mobile_success">Mobile number updated successfully</string>
+    <string name="profile_label_error_name">Name can\'t be empty</string>
+    <string name="profile_label_error_mobile">Enter valid phone number</string>
+    <string name="profile_label_error_mobileCode">Enter country code</string>
+    <string name="profile_label_logout_message">Are you sure you want to Sign Out?</string>
+    <string name="profile_label_logout_yes">YES</string>
+    <string name="profile_label_logout_no">NO</string>
+    <string name="screen_partner_viewprofile_TXT_title">Profile</string>
+
+    <!--ChangePassword Activity-->
+    <string name="changepassword_lable_headertextview">CHANGE PASSWORD</string>
+    <string name="changepassword_lable_old_password_edittext">Enter old password</string>
+    <string name="changepassword_lable_new_password_edittext">Enter new password</string>
+    <string name="changepassword_lable_confirm_new_password_edittext">Enter confirm password</string>
+    <string name="changepassword_lable_confirm_notmatch_edittext">Password does not match</string>
+    <string name="changepassword_lable_submit">Submit</string>
+    <string name="changepassword_label_alert_oldpassword">Please enter old password</string>
+    <string name="changepassword_label_alert_newpassword">Password must be at least 6 characters, and must include at least one lower case letter, and one numeric digit.</string>
+    <string name="changepassword_label_alert_confirmpassword">Please enter confirm password</string>
+    <string name="changepassword_label_changed_success">Password has been changed successfully</string>
+
+
+    <!--View Profile Page -->
+    <string name="view_profile_label_about">About</string>
+    <string name="view_profile_label_bio">Bio :</string>
+    <string name="view_profile_label_category">Category :</string>
+    <string name="view_profile_label_chat">CHAT</string>
+    <string name="view_profile_label_call">CALL</string>
+    <string name="view_profile_sucssslabel_call">Success</string>
+    <string name="view_profile_TXT_mobilenumber_hint">Mobile Number :</string>
+
+
+    <!--Make Payment Page -->
+    <string name="make_payment_label_make_payment">MAKE PAYMENT</string>
+    <string name="make_payment_label_job_date">JOB DATE</string>
+    <string name="make_payment_label_time">TIME</string>
+    <string name="make_payment_mode_label">Select Payment Mode</string>
+    <string name="make_payment_cash_success">Payment Successful</string>
+    <string name="make_payment_wallet_success">Payment Successfully Completed</string>
+    <string name="make_payment_cash_plumber_confirm_label">Transaction Successfull.</string>
+    <string name="make_payment_empty_wallet">Wallet is Empty</string>
+    <string name="plumbal_money_add_money_button_paypal">Paypal</string>
+    <!--Make Payment WebView -->
+    <string name="make_payment_webView_label_payment_transaction">PAYMENT TRANSACTION</string>
+    <string name="make_payment_webView_label_transaction_cancel">Transaction has been cancelled</string>
+    <string name="make_payment_webView_label_transaction_failed">Transaction has been failed</string>
+    <string name="make_payment_webView_label_transaction_success">Payment was successful</string>
+
+    <!--Rating Page -->
+    <string name="rating_header_textView">RATING</string>
+    <string name="rating_header_skip_textView">Skip</string>
+    <string name="rating_header_submit_textView">SUBMIT</string>
+    <string name="rating_header_comment_textView">Feedback</string>
+    <string name="rating_header_comment_feedback_invalid">Please enter feedback</string>
+    <string name="rating_header_sorry_textView">Sorry</string>
+    <string name="rating_header_enter_all">Please provide rating and click submit</string>
+    <string name="rating_submit_successfully">Your ratings submitted successfully</string>
+
+
+    <!--Chat Page -->
+    <string name="chat_page_label_message">Message</string>
+    <string name="chat_page_label_online">Online</string>
+    <string name="chat_page_label_offline">Offline</string>
+    <string name="chat_page_label_typing">typing...</string>
+    <string name="chat_page_label_message_cannot_send">Can\'t send message right now,the user is in offline</string>
+    <string name="chat_page_label_server_error">Failed to connect to server.Try again later.</string>
+
+
+    <!--Chat List Page -->
+    <string name="chat_list_page_label_chats">CHATS</string>
+    <string name="chat_list_page_label_no_chats_available">No Chats Available</string>
+    <string name="chat"> Chat</string>
+    <string name="confirmbook">Book</string>
+
+
+    <!--providerslist-->
+    <string name="providerslist_head">PROVIDERS</string>
+    <string name="providerslist_head_filter">FILTER</string>
+    <string name="providerslist_no">PROVIDERS NOT AVAILABLE</string>
+
+    <string name="upload_image">Upload Image</string>
+
+    <string name="action_gettinginfo">Getting info..</string>
+    <string name="noreviwes">You dont have any review</string>
+    <string name="profilr_header_label">My Profile</string>
+    <string name="terms_and_conditions">Are you sure you want to book now?</string>
+    <!--Chat screen-->
+    <string name="screen_chat_getmaessage_TXT_title">Chat</string>
+
+    <string name="about_us">At Hoper Rush, we offer you with a selection of on demand services that makes your everyday living simplify. We are offering wide range of services like cleaning, electrical, plumbing, Appliance, Carpentry, Computer Repair, Movers, Maid and so on.\n
+
+Booking a service using Hoper Rush is very easy and user friendly. Just select your location, choose your service and search for the tasker. It wil show you list of taskers. You can select based on the price or reviews. You can chat with all tasker instantly.</string>
+
+
+    <!-- Map_Home_page-->
+
+    <string name="enter_pickup">Enter Pickup Location</string>
+    <string name="enter_drop">Enter Drop  Location</string>
+    <string name="booking_next">Next</string>
+    <string name="search_address">Enter Address</string>
+    <string name="select_address">Select Address</string>
+    <string name="action_unable_to_create_map">Unable to create map.Install Google Play service To View Location !!!</string>
+    <string name="book_now">BOOK NOW</string>
+    <string name="book_later">BOOK LATER</string>
+    <string name="alert_sorry_label_title">Sorry!</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="action_done">Done</string>
+    <string name="your_selected_address">Selected Your Address</string>
+    <string name="time">Booking Time  :  </string>
+    <string name="date">Booking Date  :  </string>
+    <string name="taskername">Tasker Name  :  </string>
+    <string name="confirm_booking">Confirm Booking </string>
+    <string name="cancel_booking">Cancel Booking </string>
+    <string name="header_confirm">Job Confirmation </string>
+    <string name="instruction_header">Instruction</string>
+    <string name="instruction">Enter the instruction</string>
+    <string name="payment_instruction">Select any one of the payment method and Click on Make Payment and complete the payment</string>
+    <string name="terms_condition">I Agree to the Terms and Conditions</string>
+    <string name="live_tracking_text">Tasker will reach your place</string>
+    <string name="time_not_avilable">The working hours for the day have been completed,choose another day to start a task</string>
+    <string name="login_alert">Please login to continue</string>
+    <string name="select_category">Please select a category</string>
+    <string name="select_subcategory">Please select a subcategory</string>
+
+
+    <!--Appointment Page-->
+    <string name="choose_address_alert"> Sorry can add only 5 address choose any one address in previous address list or remove the any one address then proceed same address</string>
+    <string name="choose_address_warning_alert"> Sorry can add only 5 address  remove the any one address then you will add the new address</string>
+
+    <!-- Transaction Detail Page-->
+
+    <string name="activity_transaction_TXT_payment_mode">Payment Mode</string>
+
+</resources>

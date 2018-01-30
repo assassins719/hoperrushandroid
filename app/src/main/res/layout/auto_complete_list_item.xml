@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/autoComplete_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#4e4e4e"
+        android:textSize="13sp"/>
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="0"
+        android:src="@drawable/location_search_place"/>
+
+</LinearLayout>

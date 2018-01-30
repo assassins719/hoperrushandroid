@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/chat_list_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/chat_list_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/chat_list_headerBar_container_header"
+        android:background="@drawable/chat_background"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/chat_list_empty_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chat_list_headerBar_container_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:singleLine="true"
+        android:text="@string/chat_list_page_label_no_chats_available"
+        android:textColor="#131313"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

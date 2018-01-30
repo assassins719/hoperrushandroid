@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="#d9d9d9">
+
+    <include
+        android:id="@+id/plumbal_providerslist_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/relativeLayout_providers_filter"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/filter"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/providerslist_noInternet_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/myJobs_tab_layout"
+        android:background="#00000000"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <include
+                android:id="@+id/providerslist_toolbar_container_header"
+                layout="@layout/no_internet_connection"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp" />
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/myJobs_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/plumbal_providerslist_headerBar_container_header"
+        android:background="#00000000"
+        android:visibility="visible">
+
+        <ListView
+            android:id="@+id/providerslist_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/myJobs_loadMore_layout"
+            android:layout_marginTop="2dp"
+            android:background="#E5E5ED"
+            android:divider="#8e8e8e"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:id="@+id/providerslist_listView_loadMore_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            android:visibility="gone">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/splash_avLoadingIndicatorView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:indicator="Pacman"
+                app:indicator_color="@color/app_color" />
+
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/providerslist_listView_empty_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/myJobs_listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:text="@string/providerslist_no"
+            android:textColor="#4e4e4e"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

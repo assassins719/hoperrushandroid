@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/city_selection_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@xml/mixing_two_color">
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/city_selection_label_title"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/city_selection_listView"
+        android:padding="5dp"
+        android:divider="#f1f1f1"
+        android:background="#f1f1f1"
+        android:dividerHeight="5dp"
+        android:layout_below="@+id/city_selection_layout_header"/>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <com.hoperrush.core.widgets.RoundedImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/main_category_image"/>
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_category_image"
+            android:id="@+id/categorytext"
+            android:layout_centerHorizontal="true">
+            <com.hoperrush.core.widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:textColor="#000"
+                android:text="Foot Solidervcvcvcvcvcvcvcvcvcvcvcvcv"
+                android:textSize="12sp"
+                android:id="@+id/main_category_text"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/categorytext"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/checkmark"
+            android:id="@+id/check_mark_image"
+            android:visibility="gone"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="#008B8B"
+            android:layout_centerInParent="true"
+            android:id="@+id/fav_view"
+            android:layout_alignParentRight="true">
+
+        </View>
+    </RelativeLayout>
+</RelativeLayout>

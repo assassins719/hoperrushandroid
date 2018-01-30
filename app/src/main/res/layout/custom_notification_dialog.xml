@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@xml/dialog_curve_background">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+       >
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/custom_dialog_notification_library_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"/>
+
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:id="@+id/custom_dialog_notification_library_message_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custom_dialog_notification_library_title_textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/custom_dialog_notification_library_button_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/custom_dialog_notification_library_ok_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:text=""
+                android:textColor="@color/app_color"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

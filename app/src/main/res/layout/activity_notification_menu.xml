@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_viewgrey">
+
+    <include
+        android:id="@+id/notification_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
+        android:id="@+id/screen_notification_LAY_swipe"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/notification_headerBar_container_header">
+
+        <ExpandableListView
+            android:id="@+id/screen_notification_EXPLV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:childDivider="#3300954a"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:listSelector="@android:color/transparent"
+            android:groupIndicator="@null"/>
+    </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
+
+    <com.hoperrush.core.widgets.CustomTextView
+        android:id="@+id/screen_reviews_TXT_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Currently no notification found"
+        android:textColor="#4e4e4e"
+        android:textSize="18sp"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:id="@+id/notification_noInternet_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/notification_headerBar_container_header"
+        android:background="#00000000"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <include
+                android:id="@+id/myJobs_toolbar_container_header"
+                layout="@layout/no_internet_connection"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp" />
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

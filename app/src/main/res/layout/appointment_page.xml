@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <include
+        android:id="@+id/appointment_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/appointment_page_main_cardView_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appointment_headerBar_container_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#00000000">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/appointment_page_cardView_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="#f7fbfc"
+            card_view:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#f7fbfc">
+
+                <RelativeLayout
+                    android:id="@+id/appointment_page_date_select_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/appointment_page_time_view"
+                    android:background="#f7fbfc">
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/appointment_page_date_select_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/appointment_label_select_date"
+                        android:textColor="@color/app_color_button"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/appointment_page_time_view"
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#cdcdcd" />
+
+                <RelativeLayout
+                    android:id="@+id/appointment_page_time_select_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/appointment_page_time_view"
+                    android:background="#f7fbfc">
+
+                    <com.hoperrush.core.widgets.CustomTextView
+                        android:id="@+id/appointment_page_time_select_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/appointment_label_select_time"
+                        android:textColor="@color/app_color_button"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/appointment_page_main_cardView_layout"
+        android:background="#00000000">
+
+        <RelativeLayout
+            android:id="@+id/appointment_page_add_address_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#f7fbfc">
+
+            <ImageView
+                android:id="@+id/appointment_page_add_address_location_icon"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/location_marker" />
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/appointment_page_add_address_location_icon"
+                android:text="@string/appointment_label_add_address"
+                android:textColor="#7c7b7b"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/appointment_page_display_address_main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_page_add_address_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#E8E8E8">
+
+            <RelativeLayout
+                android:id="@+id/appointment_page_display_address_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#f7fbfc"
+                android:visibility="visible">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_page_your_address_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/appointment_page_more_address_layout"
+                    android:gravity="left"
+                    android:text="@string/appointment_label_your_address"
+                    android:textColor="#7c7b7b"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/appointment_page_more_address_layout"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#F4F8F9">
+
+                    <ImageView
+                        android:id="@+id/appointment_page_more_address_imageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/more_dot_icon" />
+
+                </RelativeLayout>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_page_your_address_textView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appointment_page_your_address_label"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="#9e9e9e"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/appointment_page_instruction_editText_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/appointment_page_display_address_main_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/light_grey_border_background">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/appointment_page_instruction_editText"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="top|left"
+                android:hint="@string/appointment_label_your_instruction"
+                android:inputType="textMultiLine"
+                android:lines="30"
+                android:minLines="6"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                android:textSize="14sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#00000000"
+                app:met_clearButton="false"
+                app:met_errorColor="#00000000"
+                app:met_floatingLabel="none"
+                app:met_floatingLabelTextColor="#00000000"
+                app:met_hideUnderline="true"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#00000000"
+                app:met_textColor="#9e9e9e"
+                app:met_textColorHint="#7c7b7b"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_underlineColor="#00000000" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:layout_below="@+id/appointment_page_instruction_editText_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/appointment_page_bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="108dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE">
+
+        <RelativeLayout
+            android:id="@+id/appointment_page_coupon_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="58dp"
+            android:layout_above="@+id/appointment_page_bookNow_button"
+            android:layout_alignParentTop="true"
+            android:background="#41847B"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/appointment_page_coupon_imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/coupon_icon" />
+
+            <RelativeLayout
+                android:id="@+id/appointment_page_coupon_editText_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/appointment_page_coupon_apply_layout"
+                android:layout_toRightOf="@+id/appointment_page_coupon_imageView"
+                android:background="#f7fbfc">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/appointment_page_coupon_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#ffffff"
+                    android:hint="@string/appointment_label_enter_coupon"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="#9e9e9e"
+                    app:met_textColorHint="#7c7b7b"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/appointment_page_coupon_apply_layout"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="#41847B">
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:id="@+id/appointment_page_coupon_apply_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/appointment_label_coupon_apply"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/appointment_page_bookNow_button"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_color_button"
+            android:text="@string/appointment_label_book_now"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

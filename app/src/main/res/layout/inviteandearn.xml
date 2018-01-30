@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+    <include
+        android:id="@+id/invite_earn_headerBar_container_header"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/invite_earn_headerBar_container_header"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff">
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/invite_earn_friend_earn_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text=""
+                android:textColor="#4e4e4e"
+                android:textSize="17sp"/>
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/invite_earn_you_earn_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invite_earn_friend_earn_textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="#4e4e4e"
+                android:textSize="17sp"/>
+
+            <ImageView
+                android:id="@+id/invite_earn_car_imageView"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/invite_earn_you_earn_textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:src="@mipmap/hopericon"/>
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/invite_earn_referral_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invite_earn_car_imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/invite_earn_label_shareReferralCode"
+                android:textColor="#878383"
+                android:textSize="17sp"/>
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/invite_earn_referral_code_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invite_earn_referral_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="#4e4e4e"
+                android:textSize="18sp"/>
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/invite_earn_start_inviting_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/invite_earn_referral_code_textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/invite_earn_label_start_invite"
+                android:textColor="#878383"
+                android:textSize="17sp"/>
+
+            <RelativeLayout
+                android:id="@+id/invite_earn_whatsApp_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/invite_earn_start_inviting_label"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/invite_earn_whatsApp_imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/whats_app_icon"/>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/invite_earn_whatsApp_imageView"
+                    android:text="@string/invite_earn_label_whatsApp"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/invite_earn_messenger_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/invite_earn_whatsApp_layout"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp">
+
+                <ImageView
+                    android:id="@+id/invite_earn_messenger_imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/messenger_icon"/>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/invite_earn_messenger_imageView"
+                    android:text="@string/invite_earn_label_messenger"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/invite_earn_sms_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/invite_earn_messenger_layout"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp">
+
+                <ImageView
+                    android:id="@+id/invite_earn_sms_imageView"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sms_icon"/>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/invite_earn_sms_imageView"
+                    android:text="@string/invite_earn_label_invite_sms"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/invite_earn_email_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/invite_earn_sms_layout"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp">
+
+                <ImageView
+                    android:id="@+id/invite_earn_email_imageView"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/email_icon_grey"/>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/invite_earn_email_imageView"
+                    android:text="@string/invite_earn_label_invite_email"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+
+            <com.hoperrush.core.widgets.CustomTextView
+                android:id="@+id/invite_earn_world_know_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/invite_earn_email_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/invite_earn_label_letWorldKnow"
+                android:textColor="#878383"
+                android:textSize="17sp"/>
+
+            <RelativeLayout
+                android:id="@+id/invite_earn_twitter_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/invite_earn_world_know_label"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/invite_earn_twitter_imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/twitter_icon"/>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/invite_earn_twitter_imageView"
+                    android:text="@string/invite_earn_label_twitter"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/invite_earn_facebook_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/invite_earn_twitter_layout"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp">
+
+                <ImageView
+                    android:id="@+id/invite_earn_facebook_imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/facebook_icon"/>
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/invite_earn_facebook_imageView"
+                    android:text="@string/invite_earn_label_facebook"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/invite_earn_others_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/invite_earn_facebook_layout"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp">
+
+                <ImageView
+                    android:id="@+id/invite_earn_others_imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                   android:background="@mipmap/others" />
+
+                <com.hoperrush.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/invite_earn_others_imageView"
+                    android:text="@string/invite_earn_label_others"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@+id/invite_earn_others_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:visibility="invisible"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

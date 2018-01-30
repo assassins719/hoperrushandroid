@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hoperrush_backgroud">
+
+    <RelativeLayout
+        android:id="@+id/register_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent_color">
+
+        <RelativeLayout
+            android:id="@+id/register_header_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:src="@drawable/back_arrow"/>
+        </RelativeLayout>
+
+        <com.hoperrush.core.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/register_header_back_layout"
+            android:text="@string/register_label"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/register_layout_header"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_email_edittext_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:hint="@string/register_label_email_hint"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="#FFFFFF"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#FFFFFF"
+                app:met_iconLeft="@drawable/email_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_hideUnderline="false"
+                app:met_underlineColor="#D3D3D3"
+                android:layout_marginRight="10dp"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_password_edittext_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_label_pwd_hint"
+                android:inputType="text"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="#FFFFFF"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#FFFFFF"
+                app:met_iconLeft="@drawable/password_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_hideUnderline="false"
+                app:met_underlineColor="#D3D3D3"
+                android:layout_marginRight="10dp"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_username_edittext_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_label_username_hint"
+                android:inputType="text"
+                android:paddingLeft="3dp"
+                android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                android:textSize="16sp"
+                app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                app:met_autoValidate="true"
+                app:met_baseColor="#D5D4D2"
+                app:met_clearButton="true"
+                app:met_errorColor="#FFFFFF"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#FFFFFF"
+                app:met_iconLeft="@drawable/username_icon"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="#D5D4D2"
+                app:met_textColor="@color/white_color"
+                app:met_textColorHint="#D5D4D2"
+                app:met_typeface="fonts/Roboto-Regular.ttf"
+                app:met_hideUnderline="false"
+                app:met_underlineColor="#D3D3D3"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/register_country_code_edittext_facebook"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="@string/register_label_code_hint"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:paddingRight="3dp"
+                    android:textSize="16sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#D5D4D2"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_iconLeft="@drawable/phone_icon"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#D5D4D2"
+                    app:met_textColor="@color/white_color"
+                    app:met_textColorHint="#D5D4D2"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_hideUnderline="false"
+                    app:met_underlineColor="#D3D3D3"/>
+
+
+                <View
+                    android:id="@+id/register_view"
+                    android:layout_width="1px"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="#ffffff"/>
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/register_phoneNumber_edittext_facebook"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:hint="@string/register_label_phone_hint"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="5dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                    android:textSize="16sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#D5D4D2"
+                    app:met_clearButton="true"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#D5D4D2"
+                    app:met_textColor="@color/white_color"
+                    app:met_textColorHint="#D5D4D2"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_hideUnderline="false"
+                    app:met_underlineColor="#D3D3D3"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/register_referral_code_edittext_facebook"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/register_label_referral_hint"
+                    android:inputType="text"
+                    android:textSize="16sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_white"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#D5D4D2"
+                    android:layout_weight="1"
+                    app:met_clearButton="true"
+                    app:met_errorColor="#FFFFFF"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="#FFFFFF"
+                    app:met_iconLeft="@drawable/referral_code_icon"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#D5D4D2"
+                    app:met_textColor="@color/white_color"
+                    app:met_textColorHint="#D5D4D2"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_hideUnderline="false"
+                    app:met_underlineColor="#D3D3D3"
+                    android:layout_marginRight="10dp"/>
+
+
+                <ImageView
+                    android:id="@+id/register_referral_code_help_image_facebook"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/help_icon"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_submit_button_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="#D5D4D2"
+                android:text="@string/register_label_register"
+                android:textColor="#000000"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
