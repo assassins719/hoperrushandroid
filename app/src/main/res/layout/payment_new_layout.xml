@@ -179,6 +179,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/cash"
+                android:visibility="gone"
                 android:tag="cash_inactive" />
 
             <TextView
@@ -190,6 +191,7 @@
                 android:layout_marginLeft="15dp"
                 android:text="Cash"
                 android:textColor="#848484"
+                android:visibility="gone"
                 android:textSize="15sp" />
 
             <ImageView
@@ -203,6 +205,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/paypal"
+                android:visibility="gone"
                 android:tag="pay_inactive" />
 
             <TextView
@@ -215,6 +218,7 @@
                 android:layout_marginLeft="12dp"
                 android:text="Paypal"
                 android:textColor="#848484"
+                android:visibility="gone"
                 android:textSize="15sp" />
 
             <ImageView
@@ -227,6 +231,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/wallet"
+                android:visibility="gone"
                 android:tag="wallet_inactive" />
 
             <TextView
@@ -240,6 +245,7 @@
                 android:layout_marginLeft="15dp"
                 android:text="Wallet"
                 android:textColor="#848484"
+                android:visibility="gone"
                 android:textSize="15sp" />
         </LinearLayout>
 

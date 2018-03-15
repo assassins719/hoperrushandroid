@@ -251,10 +251,7 @@ public class PaymentNew extends ActivityHockeyApp {
                 } else {
                     Toast.makeText(PaymentNew.this, "first Agree terms and condition ", Toast.LENGTH_LONG).show();
                 }
-
                 //clickButtons((ImageView) v);
-
-
             }
         });
 

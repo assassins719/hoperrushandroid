@@ -5,10 +5,10 @@
     <color name="transparent_color">#00000000</color>
     <color name="white_color">#ffffff</color>
     <color name="semi_transparent_color">#59FFFFFF</color>
-    <color name="pink_background_color">#E43F3F</color>
+    <color name="pink_background_color">#526CA5</color>
     <color name="pushNotification_custom_payment_theme_color">#59000000</color>
-    <color name="app_cancel_btn_color">#cc0000</color>
-    <color name="app_startjob_btn_color">#097054</color>
+    <color name="app_cancel_btn_color">#526CA5</color>
+    <color name="app_startjob_btn_color">#526CA5</color>
     <!--App Main Color-->
     <color name="app_color">#526CA5</color>
     <color name="appmain_color">#526CA5</color>
@@ -17,14 +17,14 @@
     <color name="app_color_red">#DB4336</color>-->
     <color name="app_color_mixing_dark">#526CA5</color>
     <color name="app_color_mixing_light">#526CA5</color>
-    <color name="app_color_button">#42B4E6</color>
+    <color name="app_color_button">#526CA5</color>
     <color name="editText_color_textView">#5e5858</color>
-    <color name="ployline_color">#31c3e7</color>
-    <color name="light_blue_color">#42B4E6</color>
+    <color name="ployline_color">#526CA5</color>
+    <color name="light_blue_color">#526CA5</color>
     <color name="back_color">#000000</color>
     <color name="theme_gray">#ccced1</color>
     <color name="app_small_textcolor">#686767</color>
-    <color name="theme_orange">#fb8b29</color>
+    <color name="theme_orange">#526CA5</color>
     <color name="tab_color">#526CA5</color>
     <!--PkDialog Color-->
     <color name="card_background">#ffffff</color>
@@ -39,10 +39,10 @@
     <color name="chat_company_reply_background_color">#F5F5F5</color>
     <color name="gray">@android:color/darker_gray</color>
     <color name="transparent">@android:color/transparent</color>
-    <color name="orange">@android:color/holo_blue_light</color>
-    <color name="background_tab_pressed">#6633B5E5</color>
-    <color name="ratingmap">#FFD700</color>
+    <color name="orange">#526CA5</color>
+    <color name="background_tab_pressed">#526CA5</color>
+    <color name="ratingmap">#526CA5</color>
 
     <!-- map Fragment Page Color-->
-    <color name="pink_color">#f17a9c</color>
+    <color name="pink_color">#526CA5</color>
 </resources>

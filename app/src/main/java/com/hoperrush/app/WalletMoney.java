@@ -17,17 +17,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.NetworkResponse;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.hoperrush.R;
 import com.hoperrush.core.dialog.LoadingDialog;
 import com.hoperrush.core.dialog.PkDialog;
@@ -46,13 +36,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.RequestBody;
 /**
  * Casperon Technology on 1/5/2016.
  */
@@ -83,6 +75,7 @@ public class WalletMoney extends ActivityHockeyApp {
     private Button myPaypalBTN;
     ArrayList<String> payment_list = new ArrayList<>();
     String str_stripe = "",str_paypal = "";
+    private String inputLine;
 
 
     public class RefreshReceiver extends BroadcastReceiver {
@@ -105,6 +98,7 @@ public class WalletMoney extends ActivityHockeyApp {
         context = WalletMoney.this;
         initializeHeaderBar();
         initialize();
+
 
         Rl_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,7 +136,7 @@ public class WalletMoney extends ActivityHockeyApp {
             @Override
             public void onClick(View v) {
                 Et_plumbalMoney_enterAmount.setText(sMinimum_amt);
-                Bt_plumbalMoney_minimum_amount.setBackgroundColor(0xFF009788);
+                Bt_plumbalMoney_minimum_amount.setBackgroundColor(getResources().getColor(R.color.app_color_mixing_dark));
                 Bt_plumbalMoney_between_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 Bt_plumbalMoney_maximum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 Et_plumbalMoney_enterAmount.setSelection(Et_plumbalMoney_enterAmount.getText().length());
@@ -153,7 +147,7 @@ public class WalletMoney extends ActivityHockeyApp {
             @Override
             public void onClick(View v) {
                 Et_plumbalMoney_enterAmount.setText(sMiddle_amt);
-                Bt_plumbalMoney_between_amount.setBackgroundColor(0xFF009788);
+                Bt_plumbalMoney_between_amount.setBackgroundColor(getResources().getColor(R.color.app_color_mixing_dark));
                 Bt_plumbalMoney_minimum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 Bt_plumbalMoney_maximum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 Et_plumbalMoney_enterAmount.setSelection(Et_plumbalMoney_enterAmount.getText().length());
@@ -164,7 +158,7 @@ public class WalletMoney extends ActivityHockeyApp {
             @Override
             public void onClick(View v) {
                 Et_plumbalMoney_enterAmount.setText(sMaximum_amt);
-                Bt_plumbalMoney_maximum_amount.setBackgroundColor(0xFF009788);
+                Bt_plumbalMoney_maximum_amount.setBackgroundColor(getResources().getColor(R.color.app_color_mixing_dark));
                 Bt_plumbalMoney_minimum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 Bt_plumbalMoney_between_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 Et_plumbalMoney_enterAmount.setSelection(Et_plumbalMoney_enterAmount.getText().length());
@@ -175,37 +169,37 @@ public class WalletMoney extends ActivityHockeyApp {
             @Override
             public void onClick(View v) {
                 String enteredValue = Et_plumbalMoney_enterAmount.getText().toString();
-                call_psgi();
-//                if (sMinimum_amt != null && sMinimum_amt.length() > 0) {
-//                    if (enteredValue.length() == 0) {
-//                        alert(getResources().getString(R.string.action_error), getResources().getString(R.string.action_loading_plumbal_money_empty_field));
-//                    } else if (Integer.parseInt(enteredValue) < Integer.parseInt(sMinimum_amt) || Integer.parseInt(enteredValue) > Integer.parseInt(sMaximum_amt)) {
-//                        alert(getResources().getString(R.string.action_error), getResources().getString(R.string.plumbalMoney_label_rechargeMoney_alert) + " " + sCurrencySymbol + sMinimum_amt + " " + "-" + " " + sCurrencySymbol + sMaximum_amt);
-//                    } else {
-//                        cd = new ConnectionDetector(WalletMoney.this);
-//                        isInternetPresent = cd.isConnectingToInternet();
-//
-//                        if (isInternetPresent) {
-//                            if (sAuto_charge_status.equalsIgnoreCase("1")) {
-//                                postRequest_AddMoney(WalletMoney.this, Iconstant.plumbal_add_money_url);
-//
-//                                System.out.println("WalletMoney-------------" + Iconstant.plumbal_add_money_url);
-//
-//                            } else {
-//
-//                                System.out.println("payrechargrweb---------");
-//                                Intent intent = new Intent(WalletMoney.this, MaidacMoneyWebView.class);
-//                                intent.putExtra("cabilyMoney_recharge_amount", Et_plumbalMoney_enterAmount.getText().toString());
-//                                intent.putExtra("cabilyMoney_currency_symbol", sCurrencySymbol);
-//                                intent.putExtra("cabilyMoney_currentBalance", sCurrentBalance);
-//                                startActivity(intent);
-//                                overridePendingTransition(R.anim.enter, R.anim.exit);
-//                            }
-//                        } else {
-//                            alert(getResources().getString(R.string.action_no_internet_title), getResources().getString(R.string.action_no_internet_message));
-//                        }
-//                    }
-//                }
+//                call_psgi();
+                if (sMinimum_amt != null && sMinimum_amt.length() > 0) {
+                    if (enteredValue.length() == 0) {
+                        alert(getResources().getString(R.string.action_error), getResources().getString(R.string.action_loading_plumbal_money_empty_field));
+                    } else if (Integer.parseInt(enteredValue) < Integer.parseInt(sMinimum_amt) || Integer.parseInt(enteredValue) > Integer.parseInt(sMaximum_amt)) {
+                        alert(getResources().getString(R.string.action_error), getResources().getString(R.string.plumbalMoney_label_rechargeMoney_alert) + " " + sCurrencySymbol + sMinimum_amt + " " + "-" + " " + sCurrencySymbol + sMaximum_amt);
+                    } else {
+                        cd = new ConnectionDetector(WalletMoney.this);
+                        isInternetPresent = cd.isConnectingToInternet();
+
+                        if (isInternetPresent) {
+                            if (sAuto_charge_status.equalsIgnoreCase("1")) {
+                                postRequest_AddMoney(WalletMoney.this, Iconstant.plumbal_add_money_url);
+
+                                System.out.println("WalletMoney-------------" + Iconstant.plumbal_add_money_url);
+
+                            } else {
+
+                                System.out.println("payrechargrweb---------");
+                                Intent intent = new Intent(WalletMoney.this, MaidacMoneyWebView.class);
+                                intent.putExtra("cabilyMoney_recharge_amount", Et_plumbalMoney_enterAmount.getText().toString());
+                                intent.putExtra("cabilyMoney_currency_symbol", sCurrencySymbol);
+                                intent.putExtra("cabilyMoney_currentBalance", sCurrentBalance);
+                                startActivity(intent);
+                                overridePendingTransition(R.anim.enter, R.anim.exit);
+                            }
+                        } else {
+                            alert(getResources().getString(R.string.action_no_internet_title), getResources().getString(R.string.action_no_internet_message));
+                        }
+                    }
+                }
             }
         });
 
@@ -298,15 +292,15 @@ public class WalletMoney extends ActivityHockeyApp {
             String strEnteredVal = Et_plumbalMoney_enterAmount.getText().toString();
             if (!strEnteredVal.equals("")) {
                 if (Et_plumbalMoney_enterAmount.getText().toString().equals(sMinimum_amt)) {
-                    Bt_plumbalMoney_minimum_amount.setBackgroundColor(0xFF009788);
+                    Bt_plumbalMoney_minimum_amount.setBackgroundColor(getResources().getColor(R.color.app_color_mixing_dark));
                     Bt_plumbalMoney_between_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                     Bt_plumbalMoney_maximum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 } else if (Et_plumbalMoney_enterAmount.getText().toString().equals(sMiddle_amt)) {
-                    Bt_plumbalMoney_between_amount.setBackgroundColor(0xFF009788);
+                    Bt_plumbalMoney_between_amount.setBackgroundColor(getResources().getColor(R.color.app_color_mixing_dark));
                     Bt_plumbalMoney_minimum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                     Bt_plumbalMoney_maximum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 } else if (Et_plumbalMoney_enterAmount.getText().toString().equals(sMaximum_amt)) {
-                    Bt_plumbalMoney_maximum_amount.setBackgroundColor(0xFF009788);
+                    Bt_plumbalMoney_maximum_amount.setBackgroundColor(getResources().getColor(R.color.app_color_mixing_dark));
                     Bt_plumbalMoney_minimum_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                     Bt_plumbalMoney_between_amount.setBackground(getResources().getDrawable(R.drawable.grey_border_background));
                 } else {
@@ -359,7 +353,7 @@ public class WalletMoney extends ActivityHockeyApp {
         HashMap<String, String> jsonParams = new HashMap<String, String>();
         jsonParams.put("user_id", UserID);
         mRequest = new ServiceRequest(mContext);
-        mRequest.makeServiceRequest(Url, Request.Method.POST, jsonParams, new ServiceRequest.ServiceListener() {
+        mRequest.makeServiceRequest(Url, com.android.volley.Request.Method.POST, jsonParams, new ServiceRequest.ServiceListener() {
             @Override
             public void onCompleteListener(String response) {
 
@@ -497,7 +491,7 @@ public class WalletMoney extends ActivityHockeyApp {
 
 
         mRequest = new ServiceRequest(mContext);
-        mRequest.makeServiceRequest(Url, Request.Method.POST, jsonParams, new ServiceRequest.ServiceListener() {
+        mRequest.makeServiceRequest(Url, com.android.volley.Request.Method.POST, jsonParams, new ServiceRequest.ServiceListener() {
             @Override
             public void onCompleteListener(String response) {
                 System.out.println("-------------Plumbal ADD Money Response----------------" + response);
@@ -557,7 +551,7 @@ public class WalletMoney extends ActivityHockeyApp {
 
 
         mRequest = new ServiceRequest(mContext);
-        mRequest.makeServiceRequest(Url, Request.Method.POST, jsonParams, new ServiceRequest.ServiceListener() {
+        mRequest.makeServiceRequest(Url, com.android.volley.Request.Method.POST, jsonParams, new ServiceRequest.ServiceListener() {
             @Override
             public void onCompleteListener(String response) {
                 System.out.println("-------------Plumbal ADD Money Response----------------" + response);
@@ -633,13 +627,29 @@ public class WalletMoney extends ActivityHockeyApp {
         unregisterReceiver(refreshReceiver);
         super.onDestroy();
     }
+
+    public static final MediaType JSON
+            = MediaType.parse("application/json; charset=utf-8");
+
+    OkHttpClient client = new OkHttpClient();
+
+    String post(String url, String json) throws IOException {
+        RequestBody body = RequestBody.create(JSON, json);
+        okhttp3.Request request = new okhttp3.Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+        okhttp3.Response response = client.newCall(request).execute();
+        return response.body().string();
+    }
+
     public void call_psgi(){
-        URL url = null;
-        try {
-            url = new URL("https://secure.psigate.com:27934/Messenger/XMLMessenger");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+//        URL url = null;
+//        try {
+//            url = new URL("https://staging.psigate.com:27989/Messenger/XMLMessenger");
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
 //        HttpURLConnection connection = null;
 //        try {
 //            connection = (HttpURLConnection)url.openConnection();
@@ -654,73 +664,174 @@ public class WalletMoney extends ActivityHockeyApp {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+//
+//        String strData = "";
+//        strData = "<Order>\r\n";
+//        strData = strData + "<StoreID>teststore</StoreID>\r\n";
+//        strData = strData + "<Passphrase>psigate1234</Passphrase>\r\n";
+//        strData = strData + "<PaymentType>CC</PaymentType>\r\n";
+//        strData = strData + "<Subtotal>10.00</Subtotal>\r\n";
+//        strData = strData + "<CardAction>0</CardAction>\r\n";
+//        strData = strData + "<CardNumber>4111111111111111</CardNumber>\r\n";
+//        strData = strData + "<CardExpYear>02</CardExpYear>\r\n";
+//        strData = strData + "<CardExpMonth>18</CardExpMonth>\r\n";
+//        strData = strData + "<CardIDNumber>123</CardIDNumber>\r\n";
+//        strData = strData + "</Order>";
 
-        String strData = "";
-        strData = "<Order>\r\n";
-        strData = strData + "<StoreID>HoperRushCAD</StoreID>\r\n";
-        strData = strData + "<Passphrase>45Ru5hBr00k88Mi</Passphrase>\r\n";
-        strData = strData + "<PaymentType>CC</PaymentType>\r\n";
-        strData = strData + "<Subtotal>10.00</Subtotal>\r\n";
-        strData = strData + "<CardAction>0</CardAction>\r\n";
-        strData = strData + "<CardNumber>4111111111111111</CardNumber>\r\n";
-        strData = strData + "<CardExpYear>02</CardExpYear>\r\n";
-        strData = strData + "<CardExpMonth>18</CardExpMonth>\r\n";
-        strData = strData + "<CardIDNumber>123</CardIDNumber>\r\n";
-        strData = strData + "</Order>";
+//        JSONObject json = new JSONObject();
+//        try {
+//            json.put("orderXML",strData);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//        try {
+//            String response = post(String.valueOf(url), String.valueOf(json));
+//            Log.d("Response",response);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
-        JSONObject json = new JSONObject();
+//        RequestQueue requestQueue;
+//        requestQueue = Volley.newRequestQueue(context.getApplicationContext());
+//        Log.d("Reqbody", json.toString());
+//        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, String.valueOf(url), null,
+//                new Response.Listener<JSONObject>() {
+//                    @Override
+//                    public void onResponse(JSONObject response) {
+//                        Log.d("response",response.toString());
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//            }
+//        });
+//        requestQueue.add(jsonObjectRequest);
+
+        URL url = null;
         try {
-            json.put("orderXML",strData);
-        } catch (JSONException e) {
+            url = new URL("https://dev.psigate.com:7989/Messenger/XMLMessenger");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        HttpURLConnection connection = null;
+        try {
+            connection = (HttpURLConnection)url.openConnection();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        connection.setDoInput(true);
+        connection.setDoOutput(true);
+        PrintWriter out = null;
+        try {
+            out = new PrintWriter(connection.getOutputStream());
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        RequestQueue requestQueue;
-        requestQueue = Volley.newRequestQueue(context.getApplicationContext());
+        String strData = "";
+        strData = "<Order>\r\n";
+        strData = strData + "	<StoreID>teststore055</StoreID>\r\n";
+        strData = strData + "   <Passphrase>testpass055</Passphrase>\r\n";
+        strData = strData + "	<PaymentType>CC</PaymentType>\r\n";
+        strData = strData + "	<TestResult>R</TestResult>\r\n";
+        strData = strData + "   <OrderID>Test123</OrderID>\r\n";
+        strData = strData + "	<Userid>User1</Userid>\r\n";
+        strData = strData + "	<Baddress1>123 Main St.</Baddress1>\r\n";
+        strData = strData + "	<Tax1>1</Tax1>\r\n";
+        strData = strData + "	<Tax2>2</Tax2>\r\n";
+        strData = strData + "	<Tax3>3</Tax3>\r\n";
+        strData = strData + "	<Tax4>4</Tax4>\r\n";
+        strData = strData + "	<Tax5>5</Tax5>\r\n";
+        strData = strData + "	<Shippingtotal>2.00</Shippingtotal>\r\n";
+        strData = strData + "	<Subtotal>10.00</Subtotal>\r\n";
+        strData = strData + "	<CardAction>0</CardAction>\r\n";
+        strData = strData + "	<CardHolderName>Somebody</CardHolderName>\r\n";
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, String.valueOf(url), json,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.d("response",response.toString());
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
+        strData = strData + "	<CardNumber>4005550000000019</CardNumber>\r\n";
+        strData = strData + "	<CardExpYear>08</CardExpYear>\r\n";
+        strData = strData + "	<CardExpMonth>08</CardExpMonth>\r\n";
+        strData = strData + "	<TransRefNumber></TransRefNumber>\r\n";
+        strData = strData + "	<CustomerIP>216.220.59.201</CustomerIP>\r\n";
+        strData = strData + "	<CardIDNumber>999</CardIDNumber>\r\n";
+//				strData = strData + "	<CardXid>cardxid</CardXid>\r\n";
+//				strData = strData + "	<CardECI>cardeci</CardECI>\r\n";
+//				strData = strData + "	<CardCavv>cardcavv</CardCavv>\r\n";
+//				strData = strData + "	<CardLevel2PO>cardlevel2po</CardLevel2PO>\r\n";
+//				strData = strData + "	<CardLevel2Tax>cardlevel2tax</CardLevel2Tax>\r\n";
+//				strData = strData + "	<CardLevel2TaxExempt>cardlevel2taxexempt</CardLevel2TaxExempt>\r\n";
+//				strData = strData + "	<CardLevel2ShiptoZip>CardLevel2ShiptoZip</CardLevel2ShiptoZip>\r\n";
+//				strData = strData + "	<AuthorizationNumber>123456</AuthorizationNumber>\r\n";	
+        //			strData = strData + "	<CardRefNumber>99999</CardRefNumber>\r\n";	
+
+        strData = strData + "	<Item>\r\n";
+        strData = strData + "			<ItemID>apple</ItemID>\r\n";
+        strData = strData + "			<ItemDescription>delicious apple</ItemDescription>\r\n";
+        strData = strData + "			<ItemQty>2</ItemQty>\r\n";
+        strData = strData + "			<ItemPrice>1.5</ItemPrice>\r\n";
+        strData = strData + "	                  <Option>\r\n";
+        strData = strData + "	                      <Colour1>Red</Colour1>\r\n";
+        strData = strData + "	                      <Size1>11</Size1>\r\n";
+        strData = strData + "	                      <Maker1>PSiGate11</Maker1>\r\n";
+        strData = strData + "	                  </Option>\r\n";
+        strData = strData + "		</Item>\r\n";
+        strData = strData + "		<Item>\r\n";
+        strData = strData + "			<ItemID>book</ItemID>\r\n";
+        strData = strData + "			<ItemDescription>good book</ItemDescription>\r\n";
+        strData = strData + "			<ItemQty>3</ItemQty>\r\n";
+        strData = strData + "			<ItemPrice>2.5</ItemPrice>\r\n";
+        strData = strData + "	                  <Option>\r\n";
+        strData = strData + "	                      <Colour21>Red</Colour21>\r\n";
+        strData = strData + "	                      <Size21>21</Size21>\r\n";
+        strData = strData + "	                      <Maker21>PSiGate21</Maker21>\r\n";
+        strData = strData + "	                  </Option>\r\n";
+        strData = strData + "		</Item>\r\n";
+        strData = strData + "		<Item>\r\n";
+        strData = strData + "			<ItemID>computer</ItemID>\r\n";
+        strData = strData + "			<ItemDescription>IBM computer</ItemDescription>\r\n";
+        strData = strData + "			<ItemQty>1</ItemQty>\r\n";
+        strData = strData + "			<ItemPrice>12</ItemPrice>\r\n";
+        strData = strData + "	                  <Option>\r\n";
+        strData = strData + "	                      <Colour33>Red</Colour33>\r\n";
+        strData = strData + "	                      <Size33>33</Size33>\r\n";
+        strData = strData + "	                      <Maker33>PSiGate33</Maker33>\r\n";
+        strData = strData + "	                  </Option>\r\n";
+        strData = strData + "		</Item>\r\n";
+
+        strData = strData + "</Order>";
+        out.println(strData);
+
+        out.flush();
+        out.close();
+
+        // code to read response
+
+
+        BufferedReader in = null;
+        try {
+            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        StringBuffer strReturn = new StringBuffer();
+
+        boolean xxx = false;
+        try {
+            while ((inputLine = in.readLine()) != null)
+            {
+                xxx = true;
+                strReturn.append("\r\n" + inputLine);
             }
-        });
-        requestQueue.add(jsonObjectRequest);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-//        out.println(strData);
-//        out.flush();
-////        out.close();
-//        // code to read response
-//        BufferedReader in = null;
-//        try {
-//            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        StringBuffer strReturn = new StringBuffer();
-//
-//        boolean xxx = false;
-//        String inputLine;
-//        try {
-//            while ((inputLine = in.readLine()) != null)
-//            {
-//                xxx = true;
-//                strReturn.append("\r\n" + inputLine);
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        System.out.println("strReturn = " + strReturn);
-//        try {
-//            in.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        connection.disconnect();
+        System.out.println("strReturn = " + strReturn);
+        try {
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        connection.disconnect();
     }
 }

@@ -256,7 +256,7 @@
     <string name="plumbalMoney_label_rechargeMoney_alert">Recharge amount should be between</string>
     <string name="plumbalMoney_label_add_plumbalMoney">ADD WALLET MONEY</string>
     <string name="walletMoney_label_add_plumbalMoney">Stripe</string>
-    <string name="walletMoney_label_add_psgiMoney">PSGiPayment</string>
+    <string name="walletMoney_label_add_psgiMoney">Stripe</string>
     <string name="plumbalMoney_enter_amount">please enter amount to add your wallet</string>
     <string name="action_loading_plumbal_money_empty_field">Enter the amount</string>
     <string name="action_loading_plumbalMoney_transaction_wallet_success">Transaction successful</string>

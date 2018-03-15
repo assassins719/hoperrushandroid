@@ -82,13 +82,16 @@ public class NavigationDrawer extends ActionBarActivityHockeyApp {
                             getResources().getString(R.string.navigation_label_emergency),
                             getResources().getString(R.string.navigation_label_report_issue),
                             getResources().getString(R.string.navigation_label_aboutUs),
+                            "Terms and Condition",
+                            "Privacy Policy",
                             getResources().getString(R.string.navigation_label_logout),
 
                     };
 
                     icon = new int[]{R.drawable.no_profile_image_avatar_icon, R.drawable.home_icon,
                             R.drawable.my_orders_icon, R.drawable.plumbal_money,R.drawable.icon_menu_transaction, R.drawable.icon_menu_chat,R.drawable.icon_menu_notification, R.drawable.icon_menu_review,
-                            R.drawable.invite_and_earn, R.drawable.emergency_contact, R.drawable.report_issue_icon, R.drawable.aboutus_icon,R.drawable.logout};
+                            R.drawable.invite_and_earn, R.drawable.emergency_contact, R.drawable.report_issue_icon, R.drawable.aboutus_icon,
+                            R.drawable.aboutus_icon,R.drawable.aboutus_icon,R.drawable.logout};
                     mMenuAdapter = new HomeMenuListAdapter(context, title, icon);
                     mDrawerList.setAdapter(mMenuAdapter);
                     mMenuAdapter.notifyDataSetChanged();
@@ -159,13 +162,15 @@ public class NavigationDrawer extends ActionBarActivityHockeyApp {
                     getResources().getString(R.string.navigation_label_invite),
                     getResources().getString(R.string.navigation_label_emergency),
                     getResources().getString(R.string.navigation_label_report_issue),
+                    "Terms and Condition",
                     getResources().getString(R.string.navigation_label_aboutUs),
                     getResources().getString(R.string.navigation_label_logout),
             };
 
             icon = new int[]{R.drawable.no_profile_image_avatar_icon, R.drawable.home_icon,
                     R.drawable.my_orders_icon, R.drawable.plumbal_money,R.drawable.icon_menu_transaction, R.drawable.icon_menu_chat,R.drawable.icon_menu_notification, R.drawable.icon_menu_review,
-                    R.drawable.invite_and_earn, R.drawable.emergency_contact, R.drawable.report_issue_icon, R.drawable.aboutus_icon,R.drawable.logout};
+                    R.drawable.invite_and_earn, R.drawable.emergency_contact, R.drawable.report_issue_icon, R.drawable.aboutus_icon,
+                    R.drawable.aboutus_icon,R.drawable.logout};
 
             mMenuAdapter = new HomeMenuListAdapter(context, title, icon);
             mDrawerList.setAdapter(mMenuAdapter);
@@ -291,8 +296,17 @@ public class NavigationDrawer extends ActionBarActivityHockeyApp {
                         shareToGMail("quickrabbit@gmail.com", "Report on Hoper Rush Android App", "Sent from my Android");
                         break;
 
-
                     case 11:
+                        Intent intentTerm = new Intent(NavigationDrawer.this, Terms_Conditions.class);
+                        startActivity(intentTerm);
+                        overridePendingTransition(R.anim.enter, R.anim.exit);
+                        break;
+/*                    case 12:
+                        Intent intentPolicy = new Intent(NavigationDrawer.this, Privacy_Policy.class);
+                        startActivity(intentPolicy);
+                        overridePendingTransition(R.anim.enter, R.anim.exit);
+                        break;*/
+                    case 12:
                         if (isInternetPresent) {
 //                            Intent plumbalproviders_intent = new Intent(NavigationDrawer.this, AboutUs.class);
 //                            startActivity(plumbalproviders_intent);
@@ -308,7 +322,7 @@ public class NavigationDrawer extends ActionBarActivityHockeyApp {
                             alert(getResources().getString(R.string.action_no_internet_title), getResources().getString(R.string.action_no_internet_message));
                         }
                         break;
-                    case 12:
+                    case 13:
                         if (isInternetPresent) {
 
                             final PkDialog mDialog = new PkDialog(NavigationDrawer.this);

@@ -1,32 +1,27 @@
 package com.hoperrush.app;
 
-import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hoperrush.R;
-import com.hoperrush.hockeyapp.ActivityHockeyApp;
 
-/**
- * Created by user145 on 8/4/2017.
- */
-
-public class Terms_Conditions extends ActivityHockeyApp {
+public class Privacy_Policy extends AppCompatActivity {
     private RelativeLayout back;
     private TextView header_txt;
-    private WebView aboutus_webview;
-    String web_url = "",header = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.terms_conditions);
+        setContentView(R.layout.activity_privacy__policy);
+
 
         back = (RelativeLayout) findViewById(R.id.aboutus_header_back_layout);
         header_txt = (TextView)findViewById(R.id.aboutus_header_textview);
-        header_txt.setText("Terms & Conditions");
+        header_txt.setText("Privacy & Policy");
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

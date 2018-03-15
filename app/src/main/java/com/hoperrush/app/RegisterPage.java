@@ -237,8 +237,8 @@ public class RegisterPage extends FragmentActivityHockeyApp {
             public void onClick(View v) {
                 String url = Iconstant.Terms_Conditions_Url;
                 Intent intent = new Intent(RegisterPage.this, Terms_Conditions.class);
-                intent.putExtra("url", url);
-                intent.putExtra("header", getResources().getString(R.string.terms_conditions_text));
+//                intent.putExtra("url", url);
+//                intent.putExtra("header", getResources().getString(R.string.terms_conditions_text));
                 startActivity(intent);
                 overridePendingTransition(R.anim.enter, R.anim.exit);
             }
@@ -249,9 +249,9 @@ public class RegisterPage extends FragmentActivityHockeyApp {
             @Override
             public void onClick(View v) {
                 String url = Iconstant.Privacy_Polocy;
-                Intent intent = new Intent(RegisterPage.this, Terms_Conditions.class);
-                intent.putExtra("url",url);
-                intent.putExtra("header", getResources().getString(R.string.privacy_policy_text));
+                Intent intent = new Intent(RegisterPage.this, Privacy_Policy.class);
+//                intent.putExtra("url",url);
+//                intent.putExtra("header", getResources().getString(R.string.privacy_policy_text));
                 startActivity(intent);
                 overridePendingTransition(R.anim.enter, R.anim.exit);
             }

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/aboutus_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/tab_color">
+
+        <RelativeLayout
+            android:id="@+id/aboutus_header_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:src="@drawable/back_arrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/aboutus_header_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutus_layout_header"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:text="Hoper respects the intellectual property of others, and expects Users to do the same. If you believe, in good faith, that any materials on the Hoper Platform infringe upon your copyrights, please send the following information to Hoper Copyright Agent at Hoper Services Inc., 4588 Gladbrook Crescent, Mississauga, ON L5V1E6:
+                \n\n
+1- Identify the copyrighted work that you claim has been infringed, or if multiple copyrighted works are covered by this Notice;
+\n
+2- Determine the location where the original or an authorized copy of the copyrighted work exists.
+\n
+3 - Provide your name, mailing address, telephone number, and, if available, email address.
+\n
+Provide the following statement with your notice
+
+“I hereby state that I have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law”.
+\n
+4- A statement by you, made under penalty of perjury, that the information in your notice is accurate, and that you are the copyright owner or authorized to act on the copyright owner's behalf; and
+\n
+5 - An electronic or physical signature of the owner of the copyright or the person authorized to act on behalf of the owner of the copyright interest."/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
